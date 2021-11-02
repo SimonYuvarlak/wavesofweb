@@ -2,15 +2,11 @@ import React, { useCallback, useState } from "react";
 import Button from "@mui/material/Button";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import "./styles.css";
-/*
- * Read the blog post here:
- * https://letsbuildui.dev/articles/building-a-react-card-carousel-component
- */
 
 const cardItems = [
     {
@@ -116,125 +112,106 @@ const CardCarousel = () => {
     );
 
     return (
-        <Grid container marginX={4}>
-            <Grid
-                item
-                xs={9}
-                md={4}
-                lg={3}
-                alignSelf={"center"}
-                marginTop={5}
-                marginRight={5}
-            >
-                <div className="d-flex">
-                    <div className="d-grid">
-                        <Button
-                            onClick={() => handleCardTransition(1)}
-                            variant="text"
-                            color="inherit"
-                        >
-                            <ArrowDropUpIcon fontSize="large" />
-                        </Button>
-                        <Button
-                            onClick={() => handleCardTransition(-1)}
-                            variant="text"
-                            color="inherit"
-                        >
-                            <ArrowDropDownIcon fontSize="large" />
-                        </Button>
-                    </div>
-
-                    <ul className="card-carousel">
-                        {cardItems.map((card, index) => (
-                            <li
-                                key={card.id}
-                                className={`card ${determineClasses(
-                                    indexes,
-                                    index
-                                )}`}
-                            >
-                                <h2>{card.title}</h2>
-                                <p>{card.copy}</p>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            </Grid>
-            <Grid
-                item
-                md={4}
-                lg={3}
-                marginX={10}
-                marginTop={5}
-                alignSelf={"center"}
-                className="center-img"
-            >
-                <div className="work-desc">
-                    <Typography
-                        variant="subtitle1"
-                        gutterBottom
-                        component="div"
-                    >
-                        {cardItems[indexes.currentIndex].description}
-                    </Typography>
-
-                    <Typography variant="body1" gutterBottom>
-                        body1. Lorem ipsum dolor sit amet, consectetur
-                    </Typography>
-                </div>
-            </Grid>
-            <Grid
-                item
-                sm={12}
-                lg={3}
-                alignSelf={"center"}
-                marginTop={5}
-                className="center-img"
-            >
-                <ImageList
-                    sx={{ width: 400, height: 300 }}
-                    variant="woven"
-                    cols={3}
+        <Box sx={{ flexGrow: 1 }}>
+            <Grid container>
+                <Grid
+                    item
+                    xs={12}
+                    md={5}
+                    alignSelf={"center"}
+                    marginTop={15}
+                    marginBottom={15}
                 >
-                    <ImageListItem>
-                        <img
-                            src={`${
-                                cardItems[indexes.currentIndex].img1
-                            }?w=161&fit=crop&auto=format`}
-                            srcSet={`${
-                                cardItems[indexes.currentIndex].img1
-                            }?w=161&fit=crop&auto=format&dpr=2 2x`}
-                            alt={cardItems[indexes.currentIndex].title}
-                            loading="lazy"
-                        />
-                    </ImageListItem>
-                    <ImageListItem>
-                        <img
-                            src={`${
-                                cardItems[indexes.currentIndex].img1
-                            }?w=161&fit=crop&auto=format`}
-                            srcSet={`${
-                                cardItems[indexes.currentIndex].img1
-                            }?w=161&fit=crop&auto=format&dpr=2 2x`}
-                            alt={cardItems[indexes.currentIndex].title}
-                            loading="lazy"
-                        />
-                    </ImageListItem>
-                    <ImageListItem>
-                        <img
-                            src={`${
-                                cardItems[indexes.currentIndex].img1
-                            }?w=161&fit=crop&auto=format`}
-                            srcSet={`${
-                                cardItems[indexes.currentIndex].img1
-                            }?w=161&fit=crop&auto=format&dpr=2 2x`}
-                            alt={cardItems[indexes.currentIndex].title}
-                            loading="lazy"
-                        />
-                    </ImageListItem>
-                </ImageList>
+                    <Grid className="d-flex">
+                        <Grid className="d-grid">
+                            <Button
+                                onClick={() => handleCardTransition(1)}
+                                variant="text"
+                                color="inherit"
+                            >
+                                <ArrowDropUpIcon fontSize="large" />
+                            </Button>
+                            <Button
+                                onClick={() => handleCardTransition(-1)}
+                                variant="text"
+                                color="inherit"
+                            >
+                                <ArrowDropDownIcon fontSize="large" />
+                            </Button>
+                        </Grid>
+
+                        <Grid className="card-carousel">
+                            {cardItems.map((card, index) => (
+                                <li
+                                    key={card.id}
+                                    className={`card ${determineClasses(
+                                        indexes,
+                                        index
+                                    )}`}
+                                >
+                                    <h2>{card.title}</h2>
+                                    <p>{card.description}</p>
+                                </li>
+                            ))}
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+                <Grid
+                    item
+                    xs={12}
+                    sm={12}
+                    lg={5}
+                    alignSelf={"center"}
+                    marginTop={5}
+                    margin={5}
+                    className="center-img"
+                >
+                    <ImageList
+                        sx={{ width: 1 / 1, height: 1 / 1 }}
+                        variant="woven"
+                        cols={3}
+                    >
+                        <ImageListItem>
+                            <img
+                                src={`${
+                                    cardItems[indexes.currentIndex].img1
+                                }?w=161&fit=crop&auto=format`}
+                                srcSet={`${
+                                    cardItems[indexes.currentIndex].img1
+                                }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                alt={cardItems[indexes.currentIndex].title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                        <ImageListItem>
+                            <img
+                                src={`${
+                                    cardItems[indexes.currentIndex].img1
+                                }?w=161&fit=crop&auto=format`}
+                                srcSet={`${
+                                    cardItems[indexes.currentIndex].img1
+                                }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                alt={cardItems[indexes.currentIndex].title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                        <ImageListItem>
+                            <img
+                                src={`${
+                                    cardItems[indexes.currentIndex].img1
+                                }?w=161&fit=crop&auto=format`}
+                                srcSet={`${
+                                    cardItems[indexes.currentIndex].img1
+                                }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                alt={cardItems[indexes.currentIndex].title}
+                                loading="lazy"
+                            />
+                        </ImageListItem>
+                    </ImageList>
+                </Grid>
             </Grid>
-        </Grid>
+        </Box>
     );
 };
 
