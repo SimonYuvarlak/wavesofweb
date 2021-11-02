@@ -2,6 +2,7 @@ import "./App.css";
 import CardCarousel from "./components/Carousel/CustomCarousel";
 import Technologies from "./components/Technologies/Technologies";
 import AboutUs from "./components/AboutUs/AboutUs";
+import RoadMap from "./components/RoadMap/RoadMap";
 function App() {
     const context = `
   body1. Lorem ipsum dolor sit amet, consectetur 
@@ -15,6 +16,7 @@ function App() {
             <CardCarousel />
 
             <Technologies />
+            <RoadMap />
         </div>
     );
 }
