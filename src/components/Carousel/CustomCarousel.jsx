@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import "./styles.css";
+import CustomHeader from "../CustomHeader/CustomHeader";
 
 const cardItems = [
     {
@@ -113,6 +114,8 @@ const CardCarousel = () => {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
+            <CustomHeader heading={"Previous Works "} />
+
             <Grid container>
                 <Grid
                     item
