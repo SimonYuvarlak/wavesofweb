@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "./Section";
 import { Grid } from "@mui/material";
+import RoadMapArray from "./RoadMapArray";
 
 const RoadMap =  () => {
     return (
@@ -10,18 +11,13 @@ const RoadMap =  () => {
             justifyContent="center"
             alignItems="center"
         >
-            <Grid item xs={12} md={6} lg={3}>
-                <Section heading={"first"}/>
-            </Grid>
-            <Grid item xs={12} md={6} lg={3}>
-                <Section heading={"second"}/>
-            </Grid>
-            <Grid item xs={12} md={6} lg={3}>
-                <Section heading={"third"}/>
-            </Grid>
-            <Grid item xs={12} md={6} lg={3}>
-                <Section heading={"fourth"}/>
-            </Grid>
+            {RoadMapArray.map((item) => {
+                return (
+                    <Grid item xs={12} md={6} lg={3}>
+                        <Section heading={item.heading} date={item.date} itemArray={item.content}/>
+                    </Grid>
+                );
+            })}
         </Grid>
     );
 }

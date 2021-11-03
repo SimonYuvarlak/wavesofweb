@@ -2,8 +2,9 @@ import FastForwardIcon from '@mui/icons-material/FastForward';
 import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
 import { Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import { textAlign } from '@mui/system';
+import { borderTop, textAlign } from '@mui/system';
 import React from "react";
+import { Divider } from '@mui/material';
 
 const Section = (props) => {
 
@@ -17,15 +18,26 @@ const Section = (props) => {
             <Grid
             container
             direction="row"
-            justifyContent="center"
-            alignItems="center"
+            p={3}
             >
-                <FastForwardIcon /><FastForwardIcon /><FastForwardIcon /><FastForwardIcon /><FastForwardIcon />
-            </Grid>
-            <Grid item padding={4}>
-                <Typography variant="h4" gutterBottom component="div" sx={{textAlign:"left"}}>
+                <Divider>
+                    <FlightTakeoffIcon />
+                </Divider>
+                </Grid>
+            <Grid container direction="column">
+                <Typography variant="h4" gutterBottom component="div" p={3} align="left">
                     {props.heading}
                 </Typography>
+                <Typography variant="caption" display="block" gutterBottom align="left" pl={3} pr={3} pb={3}>
+                    {props.date}
+                </Typography>
+                {props.itemArray.map((item) => {
+                    return (
+                        <Typography variant="body1" gutterBottom  pl={3} pr={3} pb={3} align="left">
+                            {item}
+                        </Typography>
+                    );
+                })}
             </Grid>
         </Grid>
     );
