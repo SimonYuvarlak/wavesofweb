@@ -75,6 +75,7 @@ function App(props) {
                 <AboutUs context={context} id="about-us" />
                 <CardCarousel id="prev-work" />
                 <Technologies id="used-tech" />
+                <RoadMap id="road-map"/>
             </div>
             <ScrollTop {...props}>
                 <Fab
@@ -85,8 +86,6 @@ function App(props) {
                     <KeyboardArrowUpIcon />
                 </Fab>
             </ScrollTop>
-            <Technologies />
-            <RoadMap />
         </React.Fragment>
     );
 }
