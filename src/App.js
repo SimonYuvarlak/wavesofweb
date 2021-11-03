@@ -15,6 +15,8 @@ import Zoom from "@mui/material/Zoom";
 import NavBarHeader from "./components/NavBarHeader/NavBarHeader";
 
 function App(props) {
+import RoadMap from "./components/RoadMap/RoadMap";
+function App() {
     const context = `
   body1. Lorem ipsum dolor sit amet, consectetur 
   adipisicing elit. Quos blanditiis tenetur unde suscipit, 
@@ -84,6 +86,8 @@ function App(props) {
                     <KeyboardArrowUpIcon />
                 </Fab>
             </ScrollTop>
+            <Technologies />
+            <RoadMap />
         </React.Fragment>
     );
 }
