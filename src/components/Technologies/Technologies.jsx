@@ -2,12 +2,10 @@ import React from "react";
 import TechnologiesArray from "./TechnologiesArray";
 import Technology from "./Technology";
 import { Grid } from "@mui/material";
-import CustomHeader from "../CustomHeader/CustomHeader";
 
 const Technologies = () => {
     return (
         <Grid>
-            <CustomHeader heading={"Technologies"} />
             <Grid
                 container
                 direction="row"

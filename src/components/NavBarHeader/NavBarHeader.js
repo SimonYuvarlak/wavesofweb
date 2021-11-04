@@ -70,6 +70,11 @@ const NavBarHeader = (props) => {
             pageURL: "/roadmap",
             id: "roadmap",
         },
+        {
+            menuTitle: "Footer",
+            pageURL: "/footer",
+            id: "footer",
+        },
     ];
 
     return (

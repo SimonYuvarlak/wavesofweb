@@ -7,7 +7,6 @@ import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import "./styles.css";
-import CustomHeader from "../CustomHeader/CustomHeader";
 
 const cardItems = [
     {
@@ -114,7 +113,6 @@ const CardCarousel = () => {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <CustomHeader heading={"Previous Works "} />
 
             <Grid container>
                 <Grid
@@ -177,36 +175,30 @@ const CardCarousel = () => {
                     >
                         <ImageListItem>
                             <img
-                                src={`${
-                                    cardItems[indexes.currentIndex].img1
-                                }?w=161&fit=crop&auto=format`}
-                                srcSet={`${
-                                    cardItems[indexes.currentIndex].img1
-                                }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                src={`${cardItems[indexes.currentIndex].img1
+                                    }?w=161&fit=crop&auto=format`}
+                                srcSet={`${cardItems[indexes.currentIndex].img1
+                                    }?w=161&fit=crop&auto=format&dpr=2 2x`}
                                 alt={cardItems[indexes.currentIndex].title}
                                 loading="lazy"
                             />
                         </ImageListItem>
                         <ImageListItem>
                             <img
-                                src={`${
-                                    cardItems[indexes.currentIndex].img1
-                                }?w=161&fit=crop&auto=format`}
-                                srcSet={`${
-                                    cardItems[indexes.currentIndex].img1
-                                }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                src={`${cardItems[indexes.currentIndex].img1
+                                    }?w=161&fit=crop&auto=format`}
+                                srcSet={`${cardItems[indexes.currentIndex].img1
+                                    }?w=161&fit=crop&auto=format&dpr=2 2x`}
                                 alt={cardItems[indexes.currentIndex].title}
                                 loading="lazy"
                             />
                         </ImageListItem>
                         <ImageListItem>
                             <img
-                                src={`${
-                                    cardItems[indexes.currentIndex].img1
-                                }?w=161&fit=crop&auto=format`}
-                                srcSet={`${
-                                    cardItems[indexes.currentIndex].img1
-                                }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                src={`${cardItems[indexes.currentIndex].img1
+                                    }?w=161&fit=crop&auto=format`}
+                                srcSet={`${cardItems[indexes.currentIndex].img1
+                                    }?w=161&fit=crop&auto=format&dpr=2 2x`}
                                 alt={cardItems[indexes.currentIndex].title}
                                 loading="lazy"
                             />

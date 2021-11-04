@@ -3,12 +3,10 @@ import { Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import image from "./assets/about-us.jpg";
 import "./style.css";
-import CustomHeader from "../CustomHeader/CustomHeader";
 
 const AboutUs = (props) => {
     return (
         <Grid container marginTop={3}>
-            <CustomHeader heading={"About Us"} />
             <Grid
                 container
                 margin={3}
