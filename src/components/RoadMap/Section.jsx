@@ -16,14 +16,14 @@ const Section = (props) => {
             alignItems="center"
         >
             <Grid
-            container
-            direction="row"
-            p={3}
+                container
+                direction="row"
+                p={3}
             >
                 <Divider>
                     <FlightTakeoffIcon />
                 </Divider>
-                </Grid>
+            </Grid>
             <Grid container direction="column">
                 <Typography variant="h4" gutterBottom component="div" p={3} align="left">
                     {props.heading}
@@ -33,7 +33,7 @@ const Section = (props) => {
                 </Typography>
                 {props.itemArray.map((item) => {
                     return (
-                        <Typography variant="body1" gutterBottom  pl={3} pr={3} pb={3} align="left">
+                        <Typography variant="body1" gutterBottom pl={3} pr={3} pb={3} align="left">
                             {item}
                         </Typography>
                     );

@@ -14,6 +14,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Zoom from "@mui/material/Zoom";
 import NavBarHeader from "./components/NavBarHeader/NavBarHeader";
 import RoadMap from "./components/RoadMap/RoadMap";
+import Footer from "./components/Footer/Footer";
 
 function App(props) {
     const context = `
@@ -75,7 +76,8 @@ function App(props) {
                 <AboutUs context={context} id="about-us" />
                 <CardCarousel id="prev-work" />
                 <Technologies id="used-tech" />
-                <RoadMap id="road-map"/>
+                <RoadMap id="road-map" />
+                <Footer id="footer" />
             </div>
             <ScrollTop {...props}>
                 <Fab
