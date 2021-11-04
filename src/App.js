@@ -1,6 +1,5 @@
 import "./App.css";
 import CardCarousel from "./components/Carousel/CustomCarousel";
-import Technologies from "./components/Technologies/Technologies";
 import AboutUs from "./components/AboutUs/AboutUs";
 import * as React from "react";
 import PropTypes from "prop-types";
@@ -125,19 +124,19 @@ function App(props) {
                 <Toolbar id="back-to-top-anchor" />
                 <div className="App">
                     <PaddingElement space={3} />
-                    <CustomHeader heading={"About Us"} />
+                    <CustomHeader heading={"About Us"} variant={"h2"} />
                     <AboutUs context={context} id="about-us" />
                     <PaddingElement space={5} />
-                    <CustomHeader heading={"Previous Works"} />
+                    <CustomHeader heading={"Previous Works"} variant={"h2"} />
                     <CardCarousel id="prev-work" />
+                    {/* <PaddingElement space={5} />
+                    <CustomHeader heading={"Technologies"} variant={"h2"} />
+                    <Technologies id="used-tech" /> */}
                     <PaddingElement space={5} />
-                    <CustomHeader heading={"Technologies"} />
-                    <Technologies id="used-tech" />
+                    <CustomHeader heading={"Road Map"} variant={"h2"} />
+                    <RoadMap id="road-map" variant={"h2"} />
                     <PaddingElement space={5} />
-                    <CustomHeader heading={"Road Map"} />
-                    <RoadMap id="road-map" />
-                    <PaddingElement space={5} />
-                    <CustomHeader heading={"Contact Us"} />
+                    <CustomHeader heading={"Contact Us"} variant={"h2"} />
                     <Footer id="footer" />
                 </div>
                 <ScrollTop {...props}>
