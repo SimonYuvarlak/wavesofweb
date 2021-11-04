@@ -113,14 +113,14 @@ const CardCarousel = () => {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-
             <Grid container>
                 <Grid
                     item
                     xs={12}
-                    md={5}
+                    md={12}
+                    lg={6}
                     alignSelf={"center"}
-                    marginTop={15}
+                    marginTop={5}
                     marginBottom={15}
                 >
                     <Grid className="d-flex">
@@ -160,7 +160,6 @@ const CardCarousel = () => {
 
                 <Grid
                     item
-                    xs={12}
                     sm={12}
                     lg={5}
                     alignSelf={"center"}
@@ -175,30 +174,36 @@ const CardCarousel = () => {
                     >
                         <ImageListItem>
                             <img
-                                src={`${cardItems[indexes.currentIndex].img1
-                                    }?w=161&fit=crop&auto=format`}
-                                srcSet={`${cardItems[indexes.currentIndex].img1
-                                    }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                src={`${
+                                    cardItems[indexes.currentIndex].img1
+                                }?w=161&fit=crop&auto=format`}
+                                srcSet={`${
+                                    cardItems[indexes.currentIndex].img1
+                                }?w=161&fit=crop&auto=format&dpr=2 2x`}
                                 alt={cardItems[indexes.currentIndex].title}
                                 loading="lazy"
                             />
                         </ImageListItem>
                         <ImageListItem>
                             <img
-                                src={`${cardItems[indexes.currentIndex].img1
-                                    }?w=161&fit=crop&auto=format`}
-                                srcSet={`${cardItems[indexes.currentIndex].img1
-                                    }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                src={`${
+                                    cardItems[indexes.currentIndex].img1
+                                }?w=161&fit=crop&auto=format`}
+                                srcSet={`${
+                                    cardItems[indexes.currentIndex].img1
+                                }?w=161&fit=crop&auto=format&dpr=2 2x`}
                                 alt={cardItems[indexes.currentIndex].title}
                                 loading="lazy"
                             />
                         </ImageListItem>
                         <ImageListItem>
                             <img
-                                src={`${cardItems[indexes.currentIndex].img1
-                                    }?w=161&fit=crop&auto=format`}
-                                srcSet={`${cardItems[indexes.currentIndex].img1
-                                    }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                src={`${
+                                    cardItems[indexes.currentIndex].img1
+                                }?w=161&fit=crop&auto=format`}
+                                srcSet={`${
+                                    cardItems[indexes.currentIndex].img1
+                                }?w=161&fit=crop&auto=format&dpr=2 2x`}
                                 alt={cardItems[indexes.currentIndex].title}
                                 loading="lazy"
                             />

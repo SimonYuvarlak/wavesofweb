@@ -32,20 +32,26 @@ body {
     box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
     margin: auto;
     height: 300px;
+    min-width: 275px;
     transition: all 0.75s ease;
     opacity: 0;
     position: absolute;
     transform: scale(0.85) translateY(50px);
 }
-@media (max-width: 460px) {
+
+@media (min-width: 405px) {
     .card {
-        width: 17rem;
+        width: 68vw;
     }
 }
-
-@media (min-width: 465px) {
+@media (min-width: 600px) {
     .card {
-        width: 28rem;
+        width: 70vw;
+    }
+}
+@media (min-width: 1150px) {
+    .card {
+        width: 38vw;
     }
 }
 
