@@ -8,10 +8,20 @@ import Menu from "@material-ui/core/Menu";
 import Button from "@mui/material/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import logo from "../../assets/logo.png";
+import { Grid } from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        [theme.breakpoints.up("md")]: {
+            backgroundColor: "#white",
+        },
+        [theme.breakpoints.down("md")]: {
+            backgroundColor: "#white",
+        },
+    },
+    dFlex: {
+        display: "flex",
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -21,16 +31,18 @@ const useStyles = makeStyles((theme) => ({
             flexGrow: 1,
         },
     },
-    headerOptions: {
-        display: "flex",
-        flex: 1,
-        justifyContent: "space-around",
-        width: "100%",
-    },
     navBtn: {
-        width: "14rem",
-        height: "5rem",
-        marginTop: "3.7rem",
+        width: "10rem",
+        height: "3rem",
+        marginRight: "2.2rem",
+        marginTop: "1.7rem",
+        [theme.breakpoints.up("md")]: {
+            color: "#7B1EA2",
+        },
+    },
+    image: {
+        width: "150px",
+        heiht: "200px",
     },
 }));
 
@@ -81,7 +93,7 @@ const NavBarHeader = (props) => {
         <div className={classes.root}>
             <Toolbar>
                 {isMobile ? (
-                    <>
+                    <Grid container>
                         <IconButton
                             edge="end"
                             className={classes.menuButton}
@@ -91,19 +103,19 @@ const NavBarHeader = (props) => {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <img src={logo} alt="img" className="image" />
+                        <img src={logo} alt="img" className={classes.image} />
 
                         <Menu
                             id="menu-appbar"
                             anchorEl={anchorEl}
                             anchorOrigin={{
                                 vertical: "top",
-                                horizontal: "right",
+                                horizontal: "left",
                             }}
                             keepMounted
                             transformOrigin={{
                                 vertical: "top",
-                                horizontal: "right",
+                                horizontal: "left",
                             }}
                             open={open}
                             onClose={() => setAnchorEl(null)}
@@ -119,24 +131,33 @@ const NavBarHeader = (props) => {
                                 );
                             })}
                         </Menu>
-                    </>
+                    </Grid>
                 ) : (
-                    <div className="d-flex">
-                        <img src={logo} alt="img" className="image" />
-                        <div className={classes.headerOptions}>
+                    <Grid
+                        container
+                        direction={"row"}
+                        justifyContent={"space-around"}
+                    >
+                        <img src={logo} alt="img" className={classes.image} />
+                        <Grid
+                            item
+                            md={10}
+                            justifyContent={"space-around"}
+                            className={classes.headerOptions}
+                        >
                             {menuItems.map((item) => {
                                 return (
                                     <Button
                                         key={item.id}
-                                        variant="contained"
+                                        variant="text"
                                         className={classes.navBtn}
                                     >
                                         {item.menuTitle}
                                     </Button>
                                 );
                             })}
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 )}
             </Toolbar>
         </div>
