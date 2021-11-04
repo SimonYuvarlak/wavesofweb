@@ -76,19 +76,19 @@ function App(props) {
             <Toolbar id="back-to-top-anchor" />
             <div className="App">
                 <PaddingElement space={3} />
-                <CustomHeader heading={"About Us"} />
+                <CustomHeader heading={"About Us"} variant="h2" />
                 <AboutUs context={context} id="about-us" />
                 <PaddingElement space={5} />
-                <CustomHeader heading={"Previous Works"} />
+                <CustomHeader heading={"Previous Works"} variant="h2" />
                 <CardCarousel id="prev-work" />
                 <PaddingElement space={5} />
-                <CustomHeader heading={"Technologies"} />
+                <CustomHeader heading={"Technologies"} variant="h2" />
                 <Technologies id="used-tech" />
                 <PaddingElement space={5} />
-                <CustomHeader heading={"Road Map"} />
+                <CustomHeader heading={"Road Map"} variant="h2" />
                 <RoadMap id="road-map" />
                 <PaddingElement space={5} />
-                <CustomHeader heading={"Contact Us"} />
+                <CustomHeader heading={"Contact Us"} variant="h2" />
                 <Footer id="footer" />
             </div>
             <ScrollTop {...props}>

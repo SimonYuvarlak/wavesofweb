@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 const CustomHeader = (props) => {
     return (
         <Grid xs item margin={5}>
-            <Typography variant="h2" component="div">
+            <Typography variant={props.variant} component="div">
                 {props.heading}
             </Typography>
         </Grid>
