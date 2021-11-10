@@ -103,13 +103,14 @@ const CardCarousel = () => {
                             {cardItems.map((card, index) => (
                                 <li
                                     key={card.id}
+                                    style={{ backgroundColor: "#7B1EA2" }}
                                     className={`card ${determineClasses(
                                         indexes,
                                         index
                                     )}`}
                                 >
-                                    <h2>{card.title}</h2>
-                                    <p>{card.description}</p>
+                                    <h2 style={{ color: "white" }}>{card.title}</h2>
+                                    <p style={{ color: "white" }}>{card.description}</p>
                                 </li>
                             ))}
                         </Grid>
@@ -139,24 +140,20 @@ const CardCarousel = () => {
                             </ImageListItem>
                             <ImageListItem>
                                 <img
-                                    src={`${
-                                        cardItems[indexes.currentIndex].img2
-                                    }?w=161&fit=crop&auto=format`}
-                                    srcSet={`${
-                                        cardItems[indexes.currentIndex].img2
-                                    }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                    src={`${cardItems[indexes.currentIndex].img2
+                                        }?w=161&fit=crop&auto=format`}
+                                    srcSet={`${cardItems[indexes.currentIndex].img2
+                                        }?w=161&fit=crop&auto=format&dpr=2 2x`}
                                     alt={cardItems[indexes.currentIndex].title}
                                     loading="lazy"
                                 />
                             </ImageListItem>
                             <ImageListItem>
                                 <img
-                                    src={`${
-                                        cardItems[indexes.currentIndex].img3
-                                    }?w=161&fit=crop&auto=format`}
-                                    srcSet={`${
-                                        cardItems[indexes.currentIndex].img3
-                                    }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                    src={`${cardItems[indexes.currentIndex].img3
+                                        }?w=161&fit=crop&auto=format`}
+                                    srcSet={`${cardItems[indexes.currentIndex].img3
+                                        }?w=161&fit=crop&auto=format&dpr=2 2x`}
                                     alt={cardItems[indexes.currentIndex].title}
                                     loading="lazy"
                                 />

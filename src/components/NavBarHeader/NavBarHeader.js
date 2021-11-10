@@ -7,8 +7,9 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import Button from "@mui/material/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/wow-logo.png";
 import { Grid } from "@mui/material";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -37,13 +38,24 @@ const useStyles = makeStyles((theme) => ({
         marginRight: "2.2rem",
         marginTop: "1.7rem",
         [theme.breakpoints.up("md")]: {
-            color: "#7B1EA2",
+            color: "white",
         },
+        "&:hover": {
+            textShadow: "0 0 10px #FEC0CA",
+            textShadow: "0 0 10px #FEC0CA",
+            backgroundColor: "#2a232d",
+        }
     },
     image: {
-        width: "150px",
-        heiht: "200px",
-    },
+        width: "120px",
+        heiht: "120px",
+        padding: "20px",
+        transition: "transform 1.2s",
+        transformStyle: "preserve-3d",
+        "&:hover": {
+            transform: "rotateZ(360deg)",
+        }
+    }
 }));
 
 const NavBarHeader = (props) => {
@@ -73,7 +85,7 @@ const NavBarHeader = (props) => {
             id: "prev-work",
         },
         {
-            menuTitle: "Provided Services",
+            menuTitle: "Services",
             pageURL: "/services",
             id: "used-tech",
         },
@@ -90,7 +102,7 @@ const NavBarHeader = (props) => {
     ];
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} sx={{ background: "rgba(0,0,0,0.5)" }}>
             <Toolbar>
                 {isMobile ? (
                     <Grid container>
@@ -103,8 +115,7 @@ const NavBarHeader = (props) => {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <img src={logo} alt="img" className={classes.image} />
-
+                        <Button className={classes.navBtn} variant="image"><img src={logo} alt="img" className={classes.image} /></Button>
                         <Menu
                             id="menu-appbar"
                             anchorEl={anchorEl}
@@ -125,6 +136,7 @@ const NavBarHeader = (props) => {
                                     <MenuItem
                                         key={item.id}
                                         onClick={() => handleMenuClick(null)}
+                                        color="#000"
                                     >
                                         {item.menuTitle}
                                     </MenuItem>

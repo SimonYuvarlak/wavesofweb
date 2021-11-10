@@ -39,7 +39,7 @@ const Footer = () => {
                             <Grid direction="row" container>
                                 <nav aria-label="footer" item>
                                     <List>
-                                        <ListItem disablePadding>
+                                        <ListItem>
                                             <ListItemButton>
                                                 <ListItemIcon>
                                                     <InstagramIcon sx={{ color: "white" }} />
@@ -47,7 +47,7 @@ const Footer = () => {
                                                 <ListItemText primary="Instagram" sx={{ color: "white" }} />
                                             </ListItemButton>
                                         </ListItem>
-                                        <ListItem disablePadding>
+                                        <ListItem>
                                             <ListItemButton>
                                                 <ListItemIcon>
                                                     <MailOutlineIcon sx={{ color: "white" }} />
@@ -59,7 +59,7 @@ const Footer = () => {
                                 </nav>
                                 <nav aria-label="footer" item>
                                     <List>
-                                        <ListItem disablePadding>
+                                        <ListItem>
                                             <ListItemButton>
                                                 <ListItemIcon>
                                                     <GitHubIcon sx={{ color: "white" }} />
@@ -67,12 +67,12 @@ const Footer = () => {
                                                 <ListItemText primary="Github" sx={{ color: "white" }} />
                                             </ListItemButton>
                                         </ListItem>
-                                        <ListItem disablePadding>
+                                        <ListItem>
                                             <ListItemButton>
                                                 <ListItemIcon>
                                                     <LinkedInIcon sx={{ color: "white" }} />
                                                 </ListItemIcon>
-                                                <ListItemText primary="LinkedIn" sx={{ color: "white" }} />
+                                                <ListItemText primary="Linkedin" sx={{ color: "white" }} />
                                             </ListItemButton>
                                         </ListItem>
                                     </List>
@@ -83,7 +83,7 @@ const Footer = () => {
                             <Grid direction="row" container>
                                 <nav aria-label="footer" item>
                                     <List>
-                                        <ListItem disablePadding>
+                                        <ListItem>
                                             <ListItemButton>
                                                 <ListItemIcon>
                                                     <ArrowRightIcon sx={{ color: "white" }} />
@@ -91,7 +91,7 @@ const Footer = () => {
                                                 <ListItemText primary="About Us" sx={{ color: "white" }} />
                                             </ListItemButton>
                                         </ListItem>
-                                        <ListItem disablePadding>
+                                        <ListItem>
                                             <ListItemButton>
                                                 <ListItemIcon>
                                                     <ArrowRightIcon sx={{ color: "white" }} />
@@ -103,7 +103,7 @@ const Footer = () => {
                                 </nav>
                                 <nav aria-label="footer" item>
                                     <List>
-                                        <ListItem disablePadding>
+                                        <ListItem>
                                             <ListItemButton>
                                                 <ListItemIcon>
                                                     <ArrowRightIcon sx={{ color: "white" }} />
@@ -111,7 +111,7 @@ const Footer = () => {
                                                 <ListItemText primary="Services" sx={{ color: "white" }} />
                                             </ListItemButton>
                                         </ListItem>
-                                        <ListItem disablePadding>
+                                        <ListItem>
                                             <ListItemButton >
                                                 <ListItemIcon>
                                                     <ArrowRightIcon sx={{ color: "white" }} />
@@ -127,7 +127,7 @@ const Footer = () => {
                 </Grid>
                 <Grid direction="column" justifyContent="center" alignItems="center">
                     <Typography variant="caption" display="block" gutterBottom color="whitesmoke" mt={4}>
-                        CodeBrewery &reg; {year}
+                        WoW&reg; {year}
                     </Typography>
                 </Grid>
             </Grid>

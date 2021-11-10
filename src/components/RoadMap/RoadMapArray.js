@@ -2,39 +2,39 @@ import React from "react";
 
 const RoadMapArray = [
     {
-        heading: "first heading",
-        date: "01.01.2022",
+        heading: " Plan Rome",
+        date: "2022 Q1",
         content: [
-            "first content",
-            "second content",
-            "third content",
+            "Subscription System",
+            "Blog",
+            "Freelance work monitoring tool",
         ],
     },
     {
-        heading: "second heading",
-        date: "02.01.2022",
+        heading: "Plan Berlin",
+        date: "2022 Q2",
         content: [
-            "first content",
-            "second content",
-            "third content",
+            "Mailing List and Social Media Presence",
+            "Start of the Token Development",
+            "Template Offerings For Faster Freelance",
         ],
     },
     {
-        heading: "third heading",
-        date: "03.01.2022",
+        heading: "Plan Los Angeles",
+        date: "2022 Q3",
         content: [
-            "first content",
-            "second content",
-            "third content",
+            "Token Release",
+            "Token Integration to Current Tools",
+            "Airdrop",
         ],
     },
     {
-        heading: "fourth heading",
-        date: "04.01.2022",
+        heading: "Plan Atlantis",
+        date: "2022 Q4",
         content: [
-            "first content",
-            "second content",
-            "third content",
+            "Web App Release",
+            "Marketing",
+            "Optimization of The Environment",
         ],
     },
 ];

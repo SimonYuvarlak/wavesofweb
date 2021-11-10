@@ -17,14 +17,17 @@ import Footer from "./components/Footer/Footer";
 import CustomHeader from "./components/CustomHeader/CustomHeader";
 import PaddingElement from "./components/PaddingElement/PaddingElement";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Intro from "./components/Intro/Intro";
+
+//#3D0240
 
 let theme = createTheme({
     palette: {
         primary: {
-            main: "#white",
+            main: "#pink",
         },
         secondary: {
-            main: "#7B1EA2",
+            main: "#2a232d",
         },
     },
 });
@@ -114,7 +117,7 @@ function App(props) {
             <React.Fragment>
                 <CssBaseline />
                 <ElevationScroll {...props}>
-                    <AppBar>
+                    <AppBar sx={{ background: "rgba(0,0,0,0)" }}>
                         <Toolbar>
                             <NavBarHeader />
                         </Toolbar>
@@ -123,20 +126,23 @@ function App(props) {
 
                 <Toolbar id="back-to-top-anchor" />
                 <div className="App">
-                    <PaddingElement space={3} />
+                    <PaddingElement space={15} />
+                    <Intro p={5} />
+                    <PaddingElement space={20} />
                     <CustomHeader heading={"About Us"} variant={"h2"} />
+                    <PaddingElement space={20} />
                     <AboutUs context={context} id="about-us" />
-                    <PaddingElement space={5} />
+                    <PaddingElement space={30} />
                     <CustomHeader heading={"Previous Works"} variant={"h2"} />
+                    <PaddingElement space={10} />
                     <CardCarousel id="prev-work" />
-                    {/* <PaddingElement space={5} />
-                    <CustomHeader heading={"Technologies"} variant={"h2"} />
-                    <Technologies id="used-tech" /> */}
-                    <PaddingElement space={5} />
+                    <PaddingElement space={30} />
                     <CustomHeader heading={"Road Map"} variant={"h2"} />
+                    <PaddingElement space={10} />
                     <RoadMap id="road-map" variant={"h2"} />
-                    <PaddingElement space={5} />
+                    <PaddingElement space={30} />
                     <CustomHeader heading={"Contact Us"} variant={"h2"} />
+                    <PaddingElement space={10} />
                     <Footer id="footer" />
                 </div>
                 <ScrollTop {...props}>
@@ -144,6 +150,7 @@ function App(props) {
                         color="secondary"
                         size="small"
                         aria-label="scroll back to top"
+                        sx={{ boxShadow: "0 0 10px #FEC0CA", boxShadow: "0 0 5px #FEC0CA" }}
                     >
                         <KeyboardArrowUpIcon />
                     </Fab>
