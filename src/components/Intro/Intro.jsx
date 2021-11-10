@@ -1,28 +1,27 @@
 import React from "react";
 import { Typography, Grid } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
-import { Typewriter, useTypewriter, Cursor } from 'react-simple-typewriter';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import { Typewriter, useTypewriter, Cursor } from "react-simple-typewriter";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { Button } from "@material-ui/core";
 // import useMediaQuery from "@material-ui/core/useMediaQuery";
 // import { useTheme } from "@material-ui/core/styles"
 //Yukarinin mobile uyarlanmasi lazim
 
-
 const WhiteTextTypography = withStyles({
     root: {
         color: "#FFFFFF",
         fontSize: "3rem",
-        fontFamily: "Copperplate"
-    }
+        fontFamily: "Copperplate",
+    },
 })(Typography);
 
 const WhiteTextTypographySlogan = withStyles({
     root: {
         color: "#FFFFFF",
         fontSize: "1.5rem",
-        fontFamily: "Copperplate"
-    }
+        fontFamily: "Copperplate",
+    },
 })(Typography);
 
 const BlackGrid = withStyles({
@@ -34,7 +33,7 @@ const BlackGrid = withStyles({
         borderRadius: "40px 40px 40px 40px",
         boxShadow: "0 0 10px #FEC0CA",
         boxShadow: "0 0 10px #FEC0CA",
-    }
+    },
 })(Grid);
 
 const ArrowDown = withStyles({
@@ -45,15 +44,15 @@ const ArrowDown = withStyles({
         borderRadius: "50%",
         "&:hover": {
             boxShadow: "0 0 10px #FEC0CA",
-        }
-    }
+        },
+    },
 })(ArrowDownwardIcon);
 
 const ContainerGrid = withStyles({
     root: {
         // padding: "0px 250px 0px 250px",
-        padding: "0% 25% 5% 25%"
-    }
+        padding: "0% 25% 5% 25%",
+    },
 })(Grid);
 
 const Intro = () => {
@@ -62,7 +61,8 @@ const Intro = () => {
     //Mobile a uyarlanmasi lazim
 
     const terminal = [" ", "_"];
-    const text = "Welcome to Code Brewery. Our services. Web Desing. Web Development. App Development. Api Development.";
+    const text =
+        "Welcome to Code Brewery. Our services. Web Desing. Web Development. App Development. Api Development.";
 
     const arr = text.split(".");
 
@@ -72,18 +72,29 @@ const Intro = () => {
                 letter
             </Typography>
         );
-    }
+    };
 
     return (
         <Grid container justifyContent="center" direction="column">
-            <ContainerGrid item>
+            <ContainerGrid item p={2}>
                 <BlackGrid container direction="row">
                     <Grid item xs={12} md={5} lg={5}>
                         <Grid container justifyContent="center" direction="row">
-                            <WhiteTextTypography item variant="h1" component="div" gutterBottom>
+                            <WhiteTextTypography
+                                item
+                                variant="h1"
+                                component="div"
+                                gutterBottom
+                            >
                                 {">"}
                             </WhiteTextTypography>
-                            <WhiteTextTypography item variant="h1" component="div" gutterBottom sx={{ color: "#ffffff" }} >
+                            <WhiteTextTypography
+                                item
+                                variant="h1"
+                                component="div"
+                                gutterBottom
+                                sx={{ color: "#ffffff" }}
+                            >
                                 <Typewriter
                                     words={terminal}
                                     delaySpeed={500}
@@ -94,8 +105,14 @@ const Intro = () => {
                         </Grid>
                     </Grid>
                     <Grid item xs={12} md={7} lg={7}>
-                        <Grid container alignItems="letf">
-                            <WhiteTextTypography item variant="h1" component="div" gutterBottom>
+                        <Grid container alignItems="left">
+                            <WhiteTextTypography
+                                item
+                                variant="h1"
+                                component="div"
+                                gutterBottom
+                                sx={{ color: "#ffffff" }}
+                            >
                                 Waves of Web
                             </WhiteTextTypography>
                         </Grid>
@@ -103,21 +120,43 @@ const Intro = () => {
                 </BlackGrid>
             </ContainerGrid>
             <Grid item>
-                <Grid container justifyContent="center" direction="row" alignItems="center">
-                    <WhiteTextTypographySlogan item variant="overline" component="div" gutterBottom>
+                <Grid
+                    container
+                    justifyContent="center"
+                    direction="row"
+                    alignItems="center"
+                >
+                    <WhiteTextTypographySlogan
+                        item
+                        variant="overline"
+                        component="div"
+                        gutterBottom
+                    >
                         ARE YOU CODING ALONE TONIGHT ?
                     </WhiteTextTypographySlogan>
                 </Grid>
             </Grid>
             <Grid item sx={{ marginTop: "20px" }}>
-                <Grid container justifyContent="center" direction="row" alignItems="center">
-                    <WhiteTextTypographySlogan item variant="overline" component="div" gutterBottom>
-                        <Button><ArrowDown /></Button>
+                <Grid
+                    container
+                    justifyContent="center"
+                    direction="row"
+                    alignItems="center"
+                >
+                    <WhiteTextTypographySlogan
+                        item
+                        variant="overline"
+                        component="div"
+                        gutterBottom
+                    >
+                        <Button>
+                            <ArrowDown />
+                        </Button>
                     </WhiteTextTypographySlogan>
                 </Grid>
             </Grid>
         </Grid>
     );
-}
+};
 
 export default Intro;

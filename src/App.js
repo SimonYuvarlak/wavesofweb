@@ -24,7 +24,7 @@ import Intro from "./components/Intro/Intro";
 let theme = createTheme({
     palette: {
         primary: {
-            main: "#pink",
+            main: "#fff",
         },
         secondary: {
             main: "#2a232d",
@@ -118,7 +118,7 @@ function App(props) {
                 <CssBaseline />
                 <ElevationScroll {...props}>
                     <AppBar sx={{ background: "rgba(0,0,0,0)" }}>
-                        <Toolbar>
+                        <Toolbar sx={{ padding: "0 !important" }}>
                             <NavBarHeader />
                         </Toolbar>
                     </AppBar>
@@ -150,9 +150,15 @@ function App(props) {
                         color="secondary"
                         size="small"
                         aria-label="scroll back to top"
-                        sx={{ boxShadow: "0 0 10px #FEC0CA", boxShadow: "0 0 5px #FEC0CA" }}
+                        sx={{
+                            boxShadow: "0 0 20px #FEC0CA",
+                        }}
                     >
-                        <KeyboardArrowUpIcon />
+                        <KeyboardArrowUpIcon
+                            sx={{
+                                color: "white",
+                            }}
+                        />
                     </Fab>
                 </ScrollTop>
             </React.Fragment>

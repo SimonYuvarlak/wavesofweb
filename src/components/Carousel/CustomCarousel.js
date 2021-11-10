@@ -73,13 +73,12 @@ const CardCarousel = () => {
         <Box sx={{ flexGrow: 1 }}>
             <Grid container>
                 <Grid
-                    item
                     xs={12}
                     md={12}
                     lg={6}
                     alignSelf={"center"}
                     marginTop={5}
-                    marginBottom={15}
+                    marginBottom={10}
                 >
                     <Grid className="d-flex">
                         <Grid className="d-grid">
@@ -88,14 +87,18 @@ const CardCarousel = () => {
                                 variant="text"
                                 color="inherit"
                             >
-                                <ArrowDropUpIcon fontSize="large" />
+                                <ArrowDropUpIcon
+                                    style={{ color: "white", fontSize: 60 }}
+                                />
                             </Button>
                             <Button
                                 onClick={() => handleCardTransition(-1)}
                                 variant="text"
                                 color="inherit"
                             >
-                                <ArrowDropDownIcon fontSize="large" />
+                                <ArrowDropDownIcon
+                                    style={{ color: "white", fontSize: 60 }}
+                                />
                             </Button>
                         </Grid>
 
@@ -103,14 +106,18 @@ const CardCarousel = () => {
                             {cardItems.map((card, index) => (
                                 <li
                                     key={card.id}
-                                    style={{ backgroundColor: "#7B1EA2" }}
+                                    style={{ backgroundColor: "#3D0240" }}
                                     className={`card ${determineClasses(
                                         indexes,
                                         index
                                     )}`}
                                 >
-                                    <h2 style={{ color: "white" }}>{card.title}</h2>
-                                    <p style={{ color: "white" }}>{card.description}</p>
+                                    <h2 style={{ color: "white" }}>
+                                        {card.title}
+                                    </h2>
+                                    <p style={{ color: "white" }}>
+                                        {card.description}
+                                    </p>
                                 </li>
                             ))}
                         </Grid>
@@ -118,50 +125,55 @@ const CardCarousel = () => {
                 </Grid>
 
                 <Grid
-                    item
                     sm={12}
                     lg={5}
                     alignSelf={"center"}
                     marginTop={5}
-                    margin={5}
+                    marginLeft={5}
                     className="center-img"
                 >
                     {cardItems[indexes.currentIndex].img2 ? (
                         <ImageList
-                            sx={{ width: "80%", height: "80%" }}
-                            variant="woven"
+                            sx={{ width: "90%", height: "100%" }}
+                            variant="quilted"
                             cols={3}
                         >
                             <ImageListItem>
                                 <img
                                     src={cardItems[indexes.currentIndex].img1}
                                     alt={cardItems[indexes.currentIndex].title}
+                                    loading="auto"
                                 />
                             </ImageListItem>
                             <ImageListItem>
                                 <img
-                                    src={`${cardItems[indexes.currentIndex].img2
-                                        }?w=161&fit=crop&auto=format`}
-                                    srcSet={`${cardItems[indexes.currentIndex].img2
-                                        }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                    src={`${
+                                        cardItems[indexes.currentIndex].img2
+                                    }?w=161&fit=crop&auto=format`}
+                                    srcSet={`${
+                                        cardItems[indexes.currentIndex].img2
+                                    }?w=161&fit=crop&auto=format&dpr=2 2x`}
                                     alt={cardItems[indexes.currentIndex].title}
+                                    sx={{ "object-fit": "fill !important" }}
                                     loading="lazy"
                                 />
                             </ImageListItem>
                             <ImageListItem>
                                 <img
-                                    src={`${cardItems[indexes.currentIndex].img3
-                                        }?w=161&fit=crop&auto=format`}
-                                    srcSet={`${cardItems[indexes.currentIndex].img3
-                                        }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                    src={`${
+                                        cardItems[indexes.currentIndex].img3
+                                    }?w=161&fit=crop&auto=format`}
+                                    srcSet={`${
+                                        cardItems[indexes.currentIndex].img3
+                                    }?w=161&fit=crop&auto=format&dpr=2 2x`}
                                     alt={cardItems[indexes.currentIndex].title}
-                                    loading="lazy"
+                                    loading="eager"
                                 />
                             </ImageListItem>
                         </ImageList>
                     ) : (
                         <ImageList
-                            sx={{ width: "80%", height: "80%" }}
+                            sx={{ width: "90%", height: "80%" }}
                             variant="woven"
                             cols={1}
                         >
@@ -169,6 +181,7 @@ const CardCarousel = () => {
                                 <img
                                     src={cardItems[indexes.currentIndex].img1}
                                     alt={cardItems[indexes.currentIndex].title}
+                                    loading="lazy"
                                 />
                             </ImageListItem>
                         </ImageList>

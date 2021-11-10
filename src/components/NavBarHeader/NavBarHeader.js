@@ -14,11 +14,12 @@ import { Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        height: "100px",
         [theme.breakpoints.up("md")]: {
-            backgroundColor: "#white",
+            backgroundColor: "#3D0240",
         },
         [theme.breakpoints.down("md")]: {
-            backgroundColor: "#white",
+            backgroundColor: "#3D0240",
         },
     },
     dFlex: {
@@ -26,6 +27,8 @@ const useStyles = makeStyles((theme) => ({
     },
     menuButton: {
         marginRight: theme.spacing(2),
+        alignSelf: "center",
+        color: "white ",
     },
     title: {
         [theme.breakpoints.down("md")]: {
@@ -34,28 +37,25 @@ const useStyles = makeStyles((theme) => ({
     },
     navBtn: {
         width: "10rem",
-        height: "3rem",
+        height: "100%",
+        alignSelf: "center",
         marginRight: "2.2rem",
-        marginTop: "1.7rem",
         [theme.breakpoints.up("md")]: {
             color: "white",
         },
         "&:hover": {
-            textShadow: "0 0 10px #FEC0CA",
-            textShadow: "0 0 10px #FEC0CA",
-            backgroundColor: "#2a232d",
-        }
+            textShadow: "0 0 30px #FEC0CA",
+        },
     },
     image: {
-        width: "120px",
-        heiht: "120px",
-        padding: "20px",
+        width: "100px",
+        heiht: "100px",
         transition: "transform 1.2s",
         transformStyle: "preserve-3d",
         "&:hover": {
             transform: "rotateZ(360deg)",
-        }
-    }
+        },
+    },
 }));
 
 const NavBarHeader = (props) => {
@@ -115,7 +115,13 @@ const NavBarHeader = (props) => {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Button className={classes.navBtn} variant="image"><img src={logo} alt="img" className={classes.image} /></Button>
+                        <Button className={classes.navBtn} variant="image">
+                            <img
+                                src={logo}
+                                alt="img"
+                                className={classes.image}
+                            />
+                        </Button>
                         <Menu
                             id="menu-appbar"
                             anchorEl={anchorEl}
