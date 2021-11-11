@@ -9,7 +9,6 @@ import Button from "@mui/material/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import logo from "../../assets/wow-logo.png";
 import { Grid } from "@mui/material";
-import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     menuButton: {
         marginRight: theme.spacing(2),
         alignSelf: "center",
-        color: "white ",
+        color: "white !important",
     },
     title: {
         [theme.breakpoints.down("md")]: {
@@ -41,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
         alignSelf: "center",
         marginRight: "2.2rem",
         [theme.breakpoints.up("md")]: {
-            color: "white",
+            color: "white !important",
         },
         "&:hover": {
             textShadow: "0 0 30px #FEC0CA",
