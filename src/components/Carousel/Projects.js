@@ -44,5 +44,7 @@ export const cardItems = [
         description:
             "Build a Blockchain and Cryptocurrency | Full-Stack Edition",
         img1: chainImg,
+        img2: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
+        img3: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
     },
 ];

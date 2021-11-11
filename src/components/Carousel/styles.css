@@ -8,7 +8,7 @@ body {
 
 .d-flex {
     display: inline-flex;
-    margin-right: 70%;
+    margin-right: 90%;
 }
 
 .d-grid {
@@ -19,7 +19,7 @@ body {
     list-style: none;
     padding: 0;
     display: flex;
-    height: 200px;
+    height: 600px;
     align-items: center;
     position: relative;
 }
@@ -31,7 +31,7 @@ body {
     padding: 30px;
     box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
     margin: auto;
-    height: 300px;
+    height: 600px;
     min-width: 275px;
     transition: all 0.75s ease;
     opacity: 0;
@@ -41,17 +41,29 @@ body {
 
 @media (min-width: 405px) {
     .card {
-        width: 68vw;
+        width: 88vw;
+        height: 50vh;
+    }
+    .card.next {
+        height: 58vh;
     }
 }
 @media (min-width: 600px) {
     .card {
-        width: 70vw;
+        width: 85vw;
+        height: 50vh;
+    }
+    .card.next {
+        height: 58vh;
     }
 }
 @media (min-width: 1150px) {
     .card {
-        width: 38vw;
+        width: 85vw;
+        height: 57vh;
+    }
+    .card.next {
+        height: 65vh;
     }
 }
 

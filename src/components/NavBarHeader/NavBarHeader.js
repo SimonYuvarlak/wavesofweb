@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     menuButton: {
         marginRight: theme.spacing(2),
         alignSelf: "center",
-        color: "white ",
+        color: "white !important",
     },
     title: {
         [theme.breakpoints.down("md")]: {
@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
         alignSelf: "center",
         marginRight: "2.2rem",
         [theme.breakpoints.up("md")]: {
-            color: "white",
+            color: "white !important",
         },
         margin: "10px",
         "&:hover": {
