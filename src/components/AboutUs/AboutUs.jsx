@@ -54,17 +54,15 @@ const AboutUs = (props) => {
                             alignItems="left"
                             direction="column"
                             container
-                            sx={
-                                !isMobile
-                                    ? {
-                                        border: "5px solid #2A232D",
-                                        borderRadius: "40px 0px 0px 40px",
-                                    }
-                                    : {
-                                        border: "5px solid #2A232D",
-                                        borderRadius: "40px 40px 0px 0px",
-                                    }
-                            }
+                            sx={{
+                                backgroundColor: "#2a232d",
+                                backgorundColor: "rgba(0, 0, 0, 0.8)",
+                                padding: "20px 40px 10px 0px",
+                                border: "3px solid #FEC0CA",
+                                borderRadius: isMobile ? "40px 40px 0px 0px" : "40px 0px 0px 40px",
+                                boxShadow: "0 0 10px #FEC0CA",
+                                boxShadow: "0 0 10px #FEC0CA"
+                            }}
                         >
                             <CustomHeader
                                 heading={"Services"}
@@ -130,17 +128,15 @@ const AboutUs = (props) => {
                             alignItems="left"
                             direction="column"
                             container
-                            sx={
-                                !isMobile
-                                    ? {
-                                        border: "5px solid #2A232D",
-                                        borderRadius: "0px 40px 40px 0px",
-                                    }
-                                    : {
-                                        border: "5px solid #2A232D",
-                                        borderRadius: "0px 0px 40px 40px",
-                                    }
-                            }
+                            sx={{
+                                backgroundColor: "#2a232d",
+                                backgorundColor: "rgba(0, 0, 0, 0.8)",
+                                padding: "20px 40px 10px 0px",
+                                border: "3px solid #FEC0CA",
+                                borderRadius: isMobile ? "0px 0px 40px 40px" : "0px 40px 40px 0px",
+                                boxShadow: "0 0 10px #FEC0CA",
+                                boxShadow: "0 0 10px #FEC0CA"
+                            }}
                         >
                             <CustomHeader
                                 heading={"Technologies"}
