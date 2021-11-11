@@ -24,7 +24,7 @@ const Footer = () => {
     return (
         <div id="footer">
             {isMobile ? (
-                <Grid>
+                <Grid sx={{ backgroundColor: "#3D0240" }}>
                     <SocialLinks />
                     <Grid
                         item

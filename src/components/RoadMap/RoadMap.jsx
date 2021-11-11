@@ -12,33 +12,54 @@ const RoadMap = () => {
     const colors = ["pink", "pink", "pink", "pink"];
 
     return (
-        <>
+        <Grid id="road-map">
             <PaddingElement space={10} />
             <CustomHeader heading={"Road Map"} variant={"h2"} />
-            <PaddingElement space={10} />
+            <PaddingElement space={5} />
             <Grid
                 container
-                direction="column"
-                justifyContent="center"
+                direction="row"
+                alignContent="center"
                 alignItems="center"
-                id="road-map"
             >
-                {RoadMapArray.map((item) => {
-                    return (
-                        <Grid item xs={12} md={6} lg={3}>
-                            <Section
-                                heading={item.heading}
-                                date={item.date}
-                                itemArray={item.content}
-                                color={colors[index++]}
-                                headingColor={colors[index2++]}
-                                dateColor={colors[index3++]}
-                            />
-                        </Grid>
-                    );
-                })}
+                <Grid item direction="column" xs={12} md={6}>
+                    <Section
+                        heading={RoadMapArray[0].heading}
+                        date={RoadMapArray[0].date}
+                        itemArray={RoadMapArray[0].content}
+                        color={colors[index++]}
+                        headingColor={colors[index2++]}
+                        dateColor={colors[index3++]}
+                    />
+                    <Section
+                        heading={RoadMapArray[1].heading}
+                        date={RoadMapArray[1].date}
+                        itemArray={RoadMapArray[1].content}
+                        color={colors[index++]}
+                        headingColor={colors[index2++]}
+                        dateColor={colors[index3++]}
+                    />
+                </Grid>
+                <Grid item direction="row" xs={12} md={6}>
+                    <Section
+                        heading={RoadMapArray[2].heading}
+                        date={RoadMapArray[2].date}
+                        itemArray={RoadMapArray[2].content}
+                        color={colors[index++]}
+                        headingColor={colors[index2++]}
+                        dateColor={colors[index3++]}
+                    />
+                    <Section
+                        heading={RoadMapArray[3].heading}
+                        date={RoadMapArray[3].date}
+                        itemArray={RoadMapArray[3].content}
+                        color={colors[index++]}
+                        headingColor={colors[index2++]}
+                        dateColor={colors[index3++]}
+                    />
+                </Grid>
             </Grid>
-        </>
+        </Grid>
     );
 };
 

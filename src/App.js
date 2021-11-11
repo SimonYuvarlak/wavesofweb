@@ -131,6 +131,8 @@ function App(props) {
                     <AboutUs context={context} />
                     <CardCarousel />
                     <RoadMap />
+                    <PaddingElement space={15} />
+
                     <Footer />
                 </div>
                 <ScrollTop {...props}>

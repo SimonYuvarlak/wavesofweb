@@ -12,9 +12,9 @@ const Section = (props) => {
             justifyContent="center"
             alignItems="center"
         >
-            <Grid container direction="row" p={1.5}>
+            <Grid container justifyContent="center" direction="row" p={1.5}>
                 <Divider sx={{ color: props.color }}>
-                    ..................................
+                    ..........................................................................................
                     <FlightTakeoffIcon sx={{ color: props.color }} />
                 </Divider>
             </Grid>
