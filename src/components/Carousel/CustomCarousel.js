@@ -103,7 +103,7 @@ const CardCarousel = () => {
         <Box sx={{ flexGrow: 1 }} id="prev-work">
             <PaddingElement space={10} />
             <CustomHeader heading={"Previous Works"} variant={"h2"} />
-            <PaddingElement space={10} />
+            <PaddingElement space={5} />
             <Grid container>
                 <Grid xs={12} md={12} alignSelf={"center"} marginBottom={5}>
                     <Grid

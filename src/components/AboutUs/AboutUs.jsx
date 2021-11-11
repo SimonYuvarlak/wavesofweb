@@ -33,7 +33,7 @@ const AboutUs = (props) => {
         <Grid container direction="column" id="about-us">
             <PaddingElement space={10} />
             <CustomHeader heading={"About Us"} variant={"h2"} />
-            <PaddingElement space={10} />
+            <PaddingElement space={4} />
             <Typography
                 variant="h6"
                 gutterBottom
@@ -48,11 +48,12 @@ const AboutUs = (props) => {
             </Typography>
             <Grid item>
                 <Grid container direciton="row" justifyContent="center">
-                    <Grid item xs={12} md={4} lg={4}>
+                    <Grid item xs={11} md={5}>
                         <Grid
                             justifyContent="center"
                             alignItems="left"
                             direction="column"
+                            padding={5}
                             container
                             sx={{
                                 backgroundColor: "#2a232d",
@@ -73,26 +74,42 @@ const AboutUs = (props) => {
                                 <ListItem>
                                     <ListItemAvatar>
                                         <PhoneIphoneIcon
-                                            sx={{ color: "pink" }}
+                                            style={{
+                                                color: "pink",
+                                                fontSize: 50,
+                                            }}
                                         />
                                     </ListItemAvatar>
                                     <ListItemText
                                         primary="IOS and Android App Development"
-                                        sx={{ color: "whitesmoke" }}
+                                        style={{
+                                            color: "whitesmoke",
+                                            fontSize: 1,
+                                        }}
                                     />
                                 </ListItem>
                                 <ListItem>
                                     <ListItemAvatar>
-                                        <WebIcon sx={{ color: "pink" }} />
+                                        <WebIcon
+                                            style={{
+                                                color: "pink",
+                                                fontSize: 50,
+                                            }}
+                                        />
                                     </ListItemAvatar>
                                     <ListItemText
                                         primary="Web Development"
-                                        sx={{ color: "whitesmoke" }}
+                                        sx={{ color: "whitesmoke", size: 5 }}
                                     />
                                 </ListItem>
                                 <ListItem>
                                     <ListItemAvatar>
-                                        <CodeIcon sx={{ color: "pink" }} />
+                                        <CodeIcon
+                                            style={{
+                                                color: "pink",
+                                                fontSize: 50,
+                                            }}
+                                        />
                                     </ListItemAvatar>
                                     <ListItemText
                                         primary="Api Development"
@@ -122,11 +139,12 @@ const AboutUs = (props) => {
                         </Grid>
                     </Grid>
                     {/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */}
-                    <Grid item xs={12} md={4} lg={4}>
+                    <Grid item xs={11} md={5}>
                         <Grid
                             justifyContent="center"
                             alignItems="left"
                             direction="column"
+                            padding={5}
                             container
                             sx={{
                                 backgroundColor: "#2a232d",
@@ -145,7 +163,12 @@ const AboutUs = (props) => {
                             <List item>
                                 <ListItem>
                                     <ListItemAvatar>
-                                        <EvStationIcon sx={{ color: "pink" }} />
+                                        <EvStationIcon
+                                            style={{
+                                                color: "pink",
+                                                fontSize: 50,
+                                            }}
+                                        />
                                     </ListItemAvatar>
                                     <ListItemText
                                         primary="React Native"
@@ -154,7 +177,12 @@ const AboutUs = (props) => {
                                 </ListItem>
                                 <ListItem>
                                     <ListItemAvatar>
-                                        <EvStationIcon sx={{ color: "pink" }} />
+                                        <EvStationIcon
+                                            style={{
+                                                color: "pink",
+                                                fontSize: 50,
+                                            }}
+                                        />
                                     </ListItemAvatar>
                                     <ListItemText
                                         primary="React and Angular"
@@ -163,7 +191,12 @@ const AboutUs = (props) => {
                                 </ListItem>
                                 <ListItem>
                                     <ListItemAvatar>
-                                        <EvStationIcon sx={{ color: "pink" }} />
+                                        <EvStationIcon
+                                            style={{
+                                                color: "pink",
+                                                fontSize: 50,
+                                            }}
+                                        />
                                     </ListItemAvatar>
                                     <ListItemText
                                         primary="NodeJS and C#"
