@@ -136,13 +136,11 @@ function App(props) {
                     <CustomHeader heading={"Previous Works"} variant={"h2"} />
                     <PaddingElement space={10} />
                     <CardCarousel id="prev-work" />
-                    <PaddingElement space={30} />
+                    <PaddingElement space={20} />
                     <CustomHeader heading={"Road Map"} variant={"h2"} />
                     <PaddingElement space={10} />
                     <RoadMap id="road-map" variant={"h2"} />
-                    <PaddingElement space={30} />
-                    <CustomHeader heading={"Contact Us"} variant={"h2"} />
-                    <PaddingElement space={10} />
+                    <PaddingElement space={20} />
                     <Footer id="footer" />
                 </div>
                 <ScrollTop {...props}>

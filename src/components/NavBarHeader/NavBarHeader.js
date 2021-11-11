@@ -95,9 +95,9 @@ const NavBarHeader = (props) => {
             id: "roadmap",
         },
         {
-            menuTitle: "Footer",
-            pageURL: "/footer",
-            id: "footer",
+            menuTitle: "Contact Us",
+            pageURL: "/contact-us",
+            id: "contact",
         },
     ];
 

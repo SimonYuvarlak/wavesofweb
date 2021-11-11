@@ -6,8 +6,7 @@ import { withStyles } from "@material-ui/core/styles";
 const Heading = withStyles({
     root: {
         textShadow: "0 0 2px #FEC0CA",
-        textShadow: "0 0 2px #FEC0CA"
-    }
+    },
 })(Typography);
 
 const CustomHeader = (props) => {
