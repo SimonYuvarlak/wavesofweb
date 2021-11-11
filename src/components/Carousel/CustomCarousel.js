@@ -28,18 +28,23 @@ const useStyles = makeStyles((theme) => ({
     projectDesc: {
         color: "white",
         [theme.breakpoints.up("md")]: {
-            paddingBottom: "50px",
+            paddingBottom: "5vh",
         },
     },
     cardImg: {
         [theme.breakpoints.up("md")]: {
-            width: "200px",
-            height: "180px",
+            width: "180px",
+            height: "35vh",
         },
         [theme.breakpoints.down("sm")]: {
             width: "120px",
-            height: "150px",
+            height: "30vh",
         },
+    },
+    cardImgContain: {
+        height: "auto",
+        maxHeight: "35vh",
+        objectFit: "contain !important",
     },
 }));
 
@@ -110,7 +115,7 @@ const CardCarousel = () => {
             <PaddingElement space={10} />
             <CustomHeader heading={"Previous Works"} variant={"h2"} />
             <Grid container>
-                <Grid xs={12} md={12} alignSelf={"center"} marginBottom={5}>
+                <Grid xs={12} md={12} alignSelf={"center"}>
                     <Grid
                         sx={{
                             width: "80%",
@@ -197,6 +202,7 @@ const CardCarousel = () => {
                                                 sx={{
                                                     justifyContent: "center",
                                                     display: "flex",
+                                                    height: "auto",
                                                 }}
                                                 variant="quilted"
                                                 cols={3}
@@ -208,6 +214,9 @@ const CardCarousel = () => {
                                                         src={card.img1}
                                                         alt={card.title}
                                                         loading="auto"
+                                                        className={
+                                                            classes.cardImgContain
+                                                        }
                                                     />
                                                 </ImageListItem>
                                                 <ImageListItem
@@ -218,6 +227,9 @@ const CardCarousel = () => {
                                                         src={`${card.img2}?w=161&fit=crop&auto=format`}
                                                         srcSet={`${card.img2}?w=161&fit=crop&auto=format&dpr=2 2x`}
                                                         alt={card.title}
+                                                        className={
+                                                            classes.cardImgContain
+                                                        }
                                                         loading="lazy"
                                                     />
                                                 </ImageListItem>
@@ -229,6 +241,9 @@ const CardCarousel = () => {
                                                         src={`${card.img3}?w=161&fit=crop&auto=format`}
                                                         srcSet={`${card.img3}?w=161&fit=crop&auto=format&dpr=2 2x`}
                                                         alt={card.title}
+                                                        className={
+                                                            classes.cardImgContain
+                                                        }
                                                         loading="eager"
                                                     />
                                                 </ImageListItem>

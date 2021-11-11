@@ -18,7 +18,7 @@ const RoadMap = () => {
             <PaddingElement space={10} />
             <Grid
                 container
-                direction="row"
+                direction="column"
                 justifyContent="center"
                 alignItems="center"
                 id="road-map"
@@ -26,13 +26,20 @@ const RoadMap = () => {
                 {RoadMapArray.map((item) => {
                     return (
                         <Grid item xs={12} md={6} lg={3}>
-                            <Section heading={item.heading} date={item.date} itemArray={item.content} color={colors[index++]} headingColor={colors[index2++]} dateColor={colors[index3++]} />
+                            <Section
+                                heading={item.heading}
+                                date={item.date}
+                                itemArray={item.content}
+                                color={colors[index++]}
+                                headingColor={colors[index2++]}
+                                dateColor={colors[index3++]}
+                            />
                         </Grid>
                     );
                 })}
             </Grid>
         </>
     );
-}
+};
 
 export default RoadMap;

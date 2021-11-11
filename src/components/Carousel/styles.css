@@ -19,7 +19,7 @@ body {
     list-style: none;
     padding: 0;
     display: flex;
-    height: 600px;
+    height: 50vh;
     align-items: center;
     position: relative;
 }
@@ -27,7 +27,7 @@ body {
 .card {
     padding: 30px;
     margin: auto;
-    height: 600px;
+    height: 50vh;
     min-width: 275px;
     transition: all 0.75s ease;
     opacity: 0;
@@ -56,10 +56,10 @@ body {
 @media (min-width: 1150px) {
     .card {
         width: 85vw;
-        height: 50vh;
+        height: 45vh;
     }
     .card.next {
-        height: 57vh;
+        height: 52vh;
     }
 }
 
