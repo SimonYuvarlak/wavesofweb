@@ -2,9 +2,9 @@ import React from "react";
 import { Typography, Grid } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import { Typewriter, useTypewriter, Cursor } from "react-simple-typewriter";
-import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { Button } from "@material-ui/core";
 import "./styles.css";
+import ArrowLink from "../ArrowDown/ArrowLink";
 // import useMediaQuery from "@material-ui/core/useMediaQuery";
 // import { useTheme } from "@material-ui/core/styles"
 //Yukarinin mobile uyarlanmasi lazim
@@ -36,21 +36,6 @@ const BlackGrid = withStyles({
         boxShadow: "0 0 10px #FEC0CA",
     },
 })(Grid);
-
-const ArrowDown = withStyles({
-    root: {
-        fontSize: "4rem",
-        color: "pink",
-        marginTop: "70px",
-        borderRadius: "50%",
-        transition: "width 0.8s, height 0.8s, background-color 0.8s, transform 0.8s",
-        "&:hover": {
-            boxShadow: "0 0 10px #FEC0CA",
-            width: "100px",
-            height: "100px",
-        },
-    },
-})(ArrowDownwardIcon);
 
 const ContainerGrid = withStyles({
     root: {
@@ -154,7 +139,7 @@ const Intro = () => {
                         gutterBottom
                     >
                         <Button>
-                            <a href="#about-us"><ArrowDown /></a>
+                            <a href="#about-us"><ArrowLink /></a>
                         </Button>
                     </WhiteTextTypographySlogan>
                 </Grid>
