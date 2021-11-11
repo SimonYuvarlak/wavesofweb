@@ -8,6 +8,8 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { cardItems } from "./Projects";
 import "./styles.css";
+import CustomHeader from "../CustomHeader/CustomHeader";
+import PaddingElement from "../PaddingElement/PaddingElement";
 
 function determineClasses(indexes, cardIndex) {
     if (indexes.currentIndex === cardIndex) {
@@ -70,7 +72,10 @@ const CardCarousel = () => {
     );
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1 }} id="prev-work">
+            <PaddingElement space={10} />
+            <CustomHeader heading={"Previous Works"} variant={"h2"} />
+            <PaddingElement space={10} />
             <Grid container>
                 <Grid
                     xs={12}
@@ -147,12 +152,10 @@ const CardCarousel = () => {
                             </ImageListItem>
                             <ImageListItem>
                                 <img
-                                    src={`${
-                                        cardItems[indexes.currentIndex].img2
-                                    }?w=161&fit=crop&auto=format`}
-                                    srcSet={`${
-                                        cardItems[indexes.currentIndex].img2
-                                    }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                    src={`${cardItems[indexes.currentIndex].img2
+                                        }?w=161&fit=crop&auto=format`}
+                                    srcSet={`${cardItems[indexes.currentIndex].img2
+                                        }?w=161&fit=crop&auto=format&dpr=2 2x`}
                                     alt={cardItems[indexes.currentIndex].title}
                                     sx={{ "object-fit": "fill !important" }}
                                     loading="lazy"
@@ -160,12 +163,10 @@ const CardCarousel = () => {
                             </ImageListItem>
                             <ImageListItem>
                                 <img
-                                    src={`${
-                                        cardItems[indexes.currentIndex].img3
-                                    }?w=161&fit=crop&auto=format`}
-                                    srcSet={`${
-                                        cardItems[indexes.currentIndex].img3
-                                    }?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                    src={`${cardItems[indexes.currentIndex].img3
+                                        }?w=161&fit=crop&auto=format`}
+                                    srcSet={`${cardItems[indexes.currentIndex].img3
+                                        }?w=161&fit=crop&auto=format&dpr=2 2x`}
                                     alt={cardItems[indexes.currentIndex].title}
                                     loading="eager"
                                 />

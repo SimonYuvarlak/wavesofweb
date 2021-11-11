@@ -15,6 +15,7 @@ import EvStationIcon from "@mui/icons-material/EvStation";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 import { useState } from "react";
+import PaddingElement from "../PaddingElement/PaddingElement";
 // import { withStyles } from "@material-ui/core/styles";
 
 const AboutUs = (props) => {
@@ -29,7 +30,10 @@ const AboutUs = (props) => {
     const [aboutUsText, setAboutUsText] = React.useState([]);
 
     return (
-        <Grid container direction="column">
+        <Grid container direction="column" id="about-us">
+            <PaddingElement space={10} />
+            <CustomHeader heading={"About Us"} variant={"h2"} />
+            <PaddingElement space={10} />
             <Typography
                 variant="h6"
                 gutterBottom
@@ -53,13 +57,13 @@ const AboutUs = (props) => {
                             sx={
                                 !isMobile
                                     ? {
-                                          border: "5px solid #2A232D",
-                                          borderRadius: "40px 0px 0px 40px",
-                                      }
+                                        border: "5px solid #2A232D",
+                                        borderRadius: "40px 0px 0px 40px",
+                                    }
                                     : {
-                                          border: "5px solid #2A232D",
-                                          borderRadius: "40px 40px 0px 0px",
-                                      }
+                                        border: "5px solid #2A232D",
+                                        borderRadius: "40px 40px 0px 0px",
+                                    }
                             }
                         >
                             <CustomHeader
@@ -129,13 +133,13 @@ const AboutUs = (props) => {
                             sx={
                                 !isMobile
                                     ? {
-                                          border: "5px solid #2A232D",
-                                          borderRadius: "0px 40px 40px 0px",
-                                      }
+                                        border: "5px solid #2A232D",
+                                        borderRadius: "0px 40px 40px 0px",
+                                    }
                                     : {
-                                          border: "5px solid #2A232D",
-                                          borderRadius: "0px 0px 40px 40px",
-                                      }
+                                        border: "5px solid #2A232D",
+                                        borderRadius: "0px 0px 40px 40px",
+                                    }
                             }
                         >
                             <CustomHeader

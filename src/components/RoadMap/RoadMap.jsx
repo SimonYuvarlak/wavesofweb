@@ -2,6 +2,8 @@ import React from "react";
 import Section from "./Section";
 import { Grid } from "@mui/material";
 import RoadMapArray from "./RoadMapArray";
+import PaddingElement from "../PaddingElement/PaddingElement";
+import CustomHeader from "../CustomHeader/CustomHeader";
 
 const RoadMap = () => {
     var index = 0;
@@ -10,20 +12,26 @@ const RoadMap = () => {
     const colors = ["pink", "pink", "pink", "pink"];
 
     return (
-        <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-        >
-            {RoadMapArray.map((item) => {
-                return (
-                    <Grid item xs={12} md={6} lg={3}>
-                        <Section heading={item.heading} date={item.date} itemArray={item.content} color={colors[index++]} headingColor={colors[index2++]} dateColor={colors[index3++]} />
-                    </Grid>
-                );
-            })}
-        </Grid>
+        <>
+            <PaddingElement space={10} />
+            <CustomHeader heading={"Road Map"} variant={"h2"} />
+            <PaddingElement space={10} />
+            <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+                id="road-map"
+            >
+                {RoadMapArray.map((item) => {
+                    return (
+                        <Grid item xs={12} md={6} lg={3}>
+                            <Section heading={item.heading} date={item.date} itemArray={item.content} color={colors[index++]} headingColor={colors[index2++]} dateColor={colors[index3++]} />
+                        </Grid>
+                    );
+                })}
+            </Grid>
+        </>
     );
 }
 

@@ -4,6 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 import { Typewriter, useTypewriter, Cursor } from "react-simple-typewriter";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { Button } from "@material-ui/core";
+import "./styles.css";
 // import useMediaQuery from "@material-ui/core/useMediaQuery";
 // import { useTheme } from "@material-ui/core/styles"
 //Yukarinin mobile uyarlanmasi lazim
@@ -42,8 +43,11 @@ const ArrowDown = withStyles({
         color: "pink",
         marginTop: "70px",
         borderRadius: "50%",
+        transition: "width 0.8s, height 0.8s, background-color 0.8s, transform 0.8s",
         "&:hover": {
             boxShadow: "0 0 10px #FEC0CA",
+            width: "100px",
+            height: "100px",
         },
     },
 })(ArrowDownwardIcon);
@@ -75,7 +79,7 @@ const Intro = () => {
     };
 
     return (
-        <Grid container justifyContent="center" direction="column">
+        <Grid container justifyContent="center" direction="column" id="intro">
             <ContainerGrid item p={2}>
                 <BlackGrid container direction="row">
                     <Grid item xs={12} md={5} lg={5}>
@@ -150,7 +154,7 @@ const Intro = () => {
                         gutterBottom
                     >
                         <Button>
-                            <ArrowDown />
+                            <a href="#about-us"><ArrowDown /></a>
                         </Button>
                     </WhiteTextTypographySlogan>
                 </Grid>

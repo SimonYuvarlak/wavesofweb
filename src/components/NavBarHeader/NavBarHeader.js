@@ -10,11 +10,12 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import logo from "../../assets/wow-logo.png";
 import { Grid } from "@mui/material";
 import { Typography } from "@material-ui/core";
+import SocialLinks from "../SoicalLinks/SocialLinks";
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        height: "100px",
+        height: "75px",
         [theme.breakpoints.up("md")]: {
             backgroundColor: "#3D0240",
         },
@@ -37,14 +38,19 @@ const useStyles = makeStyles((theme) => ({
     },
     navBtn: {
         width: "10rem",
-        height: "100%",
+        height: "50%",
         alignSelf: "center",
         marginRight: "2.2rem",
         [theme.breakpoints.up("md")]: {
             color: "white",
         },
+        margin: "10px",
         "&:hover": {
-            textShadow: "0 0 30px #FEC0CA",
+            backgroundColor: "#2a232d",
+            border: "3px solid #FEC0CA",
+            borderRadius: "15px 15px 15px 15px",
+            boxShadow: "0 0 5px #FEC0CA",
+            textShadow: "0 0 5px #FEC0CA",
         },
     },
     image: {
@@ -78,26 +84,25 @@ const NavBarHeader = (props) => {
             menuTitle: "About Us",
             pageURL: "/about",
             id: "about-us",
+            link: "#about-us",
         },
         {
             menuTitle: "Previous Works",
             pageURL: "/works",
             id: "prev-work",
-        },
-        {
-            menuTitle: "Services",
-            pageURL: "/services",
-            id: "used-tech",
+            link: "#prev-work",
         },
         {
             menuTitle: "Roadmap",
             pageURL: "/roadmap",
             id: "roadmap",
+            link: "#road-map",
         },
         {
             menuTitle: "Contact Us",
             pageURL: "/contact-us",
             id: "contact",
+            link: "#footer",
         },
     ];
 
@@ -165,13 +170,15 @@ const NavBarHeader = (props) => {
                         >
                             {menuItems.map((item) => {
                                 return (
-                                    <Button
-                                        key={item.id}
-                                        variant="text"
-                                        className={classes.navBtn}
-                                    >
-                                        {item.menuTitle}
-                                    </Button>
+                                    <a href={item.link} style={{ textDecoration: "none" }}>
+                                        <Button
+                                            key={item.id}
+                                            variant="text"
+                                            className={classes.navBtn}
+                                        >
+                                            {item.menuTitle}
+                                        </Button>
+                                    </a>
                                 );
                             })}
                         </Grid>

@@ -128,20 +128,10 @@ function App(props) {
                 <div className="App">
                     <PaddingElement space={15} />
                     <Intro p={5} />
-                    <PaddingElement space={20} />
-                    <CustomHeader heading={"About Us"} variant={"h2"} />
-                    <PaddingElement space={20} />
-                    <AboutUs context={context} id="about-us" />
-                    <PaddingElement space={30} />
-                    <CustomHeader heading={"Previous Works"} variant={"h2"} />
-                    <PaddingElement space={10} />
-                    <CardCarousel id="prev-work" />
-                    <PaddingElement space={20} />
-                    <CustomHeader heading={"Road Map"} variant={"h2"} />
-                    <PaddingElement space={10} />
-                    <RoadMap id="road-map" variant={"h2"} />
-                    <PaddingElement space={20} />
-                    <Footer id="footer" />
+                    <AboutUs context={context} />
+                    <CardCarousel />
+                    <RoadMap />
+                    <Footer />
                 </div>
                 <ScrollTop {...props}>
                     <Fab
