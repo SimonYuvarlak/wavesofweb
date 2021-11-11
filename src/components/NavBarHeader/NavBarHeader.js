@@ -15,7 +15,7 @@ import SocialLinks from "../SoicalLinks/SocialLinks";
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        height: "75px",
+        height: "60px",
         [theme.breakpoints.up("md")]: {
             backgroundColor: "#3D0240",
         },
@@ -48,19 +48,21 @@ const useStyles = makeStyles((theme) => ({
         "&:hover": {
             backgroundColor: "#2a232d",
             border: "3px solid #FEC0CA",
-            borderRadius: "15px 15px 15px 15px",
+            borderRadius: "10px 10px 10px 10px",
             boxShadow: "0 0 5px #FEC0CA",
             textShadow: "0 0 5px #FEC0CA",
+            padding: "5px",
         },
     },
     image: {
-        width: "100px",
-        heiht: "100px",
+        width: "80px",
+        heiht: "80px",
         transition: "transform 1.2s",
         transformStyle: "preserve-3d",
         "&:hover": {
             transform: "rotateZ(360deg)",
         },
+        margin: "-5px",
     },
 }));
 
