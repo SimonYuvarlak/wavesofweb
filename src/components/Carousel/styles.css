@@ -25,11 +25,7 @@ body {
 }
 
 .card {
-    background: #ffffff;
-    border-radius: 80px;
-    border: 1px solid #eeeeee;
     padding: 30px;
-    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
     margin: auto;
     height: 600px;
     min-width: 275px;
@@ -42,28 +38,28 @@ body {
 @media (min-width: 405px) {
     .card {
         width: 88vw;
-        height: 50vh;
+        height: 45vh;
     }
     .card.next {
-        height: 58vh;
+        height: 51vh;
     }
 }
 @media (min-width: 600px) {
     .card {
         width: 85vw;
-        height: 50vh;
+        height: 45vh;
     }
     .card.next {
-        height: 58vh;
+        height: 51vh;
     }
 }
 @media (min-width: 1150px) {
     .card {
         width: 85vw;
-        height: 57vh;
+        height: 50vh;
     }
     .card.next {
-        height: 65vh;
+        height: 57vh;
     }
 }
 
