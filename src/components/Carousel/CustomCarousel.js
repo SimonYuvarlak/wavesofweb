@@ -12,12 +12,18 @@ import { makeStyles } from "@material-ui/core/styles";
 import "./styles.css";
 import CustomHeader from "../CustomHeader/CustomHeader";
 import PaddingElement from "../PaddingElement/PaddingElement";
+import ArrowLink from "../ArrowDown/ArrowLink";
 
 const useStyles = makeStyles((theme) => ({
     projectContainer: {
         [theme.breakpoints.up("md")]: {
             display: "flex",
         },
+    },
+    descContainer: {
+        display: "flex",
+        height: "75%",
+        alignItems: "center",
     },
     projectDesc: {
         color: "white",
@@ -28,11 +34,11 @@ const useStyles = makeStyles((theme) => ({
     cardImg: {
         [theme.breakpoints.up("md")]: {
             width: "200px",
-            height: "200px",
+            height: "180px",
         },
         [theme.breakpoints.down("sm")]: {
             width: "120px",
-            height: "180px",
+            height: "150px",
         },
     },
 }));
@@ -103,7 +109,6 @@ const CardCarousel = () => {
         <Box sx={{ flexGrow: 1 }} id="prev-work">
             <PaddingElement space={10} />
             <CustomHeader heading={"Previous Works"} variant={"h2"} />
-            <PaddingElement space={5} />
             <Grid container>
                 <Grid xs={12} md={12} alignSelf={"center"} marginBottom={5}>
                     <Grid
@@ -151,27 +156,35 @@ const CardCarousel = () => {
                             {cardItems.map((card, index) => (
                                 <li
                                     key={card.id}
-                                    style={{ backgroundColor: "#3D0240" }}
+                                    style={{
+                                        backgroundColor: "#2a232d",
+                                        border: "3px solid #FEC0CA",
+                                        borderRadius: "40px",
+                                        boxShadow: "0 0 10px #FEC0CA",
+                                    }}
                                     className={`card ${determineClasses(
                                         indexes,
                                         index
                                     )}`}
                                 >
-                                    <h1 style={{ color: "white" }}>
-                                        {card.title}
-                                    </h1>
-
                                     <Grid className={classes.projectContainer}>
-                                        <Grid
-                                            item
-                                            sm={12}
-                                            md={6}
-                                            lg={5}
-                                            alignSelf={"center"}
-                                        >
-                                            <p className={classes.projectDesc}>
-                                                {card.description}
-                                            </p>
+                                        <Grid item sm={12} md={6} lg={5}>
+                                            <h1 style={{ color: "white" }}>
+                                                {card.title}
+                                            </h1>
+                                            <Grid
+                                                className={
+                                                    classes.descContainer
+                                                }
+                                            >
+                                                <p
+                                                    className={
+                                                        classes.projectDesc
+                                                    }
+                                                >
+                                                    {card.description}
+                                                </p>
+                                            </Grid>
                                         </Grid>
 
                                         <Grid
@@ -205,10 +218,6 @@ const CardCarousel = () => {
                                                         src={`${card.img2}?w=161&fit=crop&auto=format`}
                                                         srcSet={`${card.img2}?w=161&fit=crop&auto=format&dpr=2 2x`}
                                                         alt={card.title}
-                                                        sx={{
-                                                            "object-fit":
-                                                                "fill !important",
-                                                        }}
                                                         loading="lazy"
                                                     />
                                                 </ImageListItem>
@@ -230,6 +239,13 @@ const CardCarousel = () => {
                             ))}
                         </Grid>
                     </Grid>
+                </Grid>
+            </Grid>
+            <Grid>
+                <Grid container justifyContent="center">
+                    <a href="#road-map">
+                        <ArrowLink />
+                    </a>
                 </Grid>
             </Grid>
         </Box>

@@ -4,7 +4,8 @@ import { withStyles } from "@material-ui/core/styles";
 import { Typewriter, useTypewriter, Cursor } from "react-simple-typewriter";
 import { Button } from "@material-ui/core";
 import "./styles.css";
-import ArrowLink from "../ArrowDown/ArrowLink";
+import image from "../../assets/pink-beast.png";
+import { makeStyles } from "@material-ui/core/styles";
 // import useMediaQuery from "@material-ui/core/useMediaQuery";
 // import { useTheme } from "@material-ui/core/styles"
 //Yukarinin mobile uyarlanmasi lazim
@@ -44,11 +45,21 @@ const ContainerGrid = withStyles({
     },
 })(Grid);
 
+const useStyles = makeStyles((theme) => ({
+    pinkBeast: {
+        "&:hover": {
+            border: "3px solid #FEC0CA",
+            borderRadius: "40px 40px 40px 40px",
+            boxShadow: "0 0 10px #FEC0CA",
+        }
+    }
+}));
+
 const Intro = () => {
     // const theme = useTheme();
     // const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
     //Mobile a uyarlanmasi lazim
-
+    const classes = useStyles();
     const terminal = [" ", "_"];
     const text =
         "Welcome to Code Brewery. Our services. Web Desing. Web Development. App Development. Api Development.";
@@ -65,7 +76,7 @@ const Intro = () => {
 
     return (
         <Grid container justifyContent="center" direction="column" id="intro">
-            <ContainerGrid item p={2}>
+            <ContainerGrid item>
                 <BlackGrid container direction="row">
                     <Grid item xs={12} md={5} lg={5}>
                         <Grid container justifyContent="center" direction="row">
@@ -121,11 +132,13 @@ const Intro = () => {
                         component="div"
                         gutterBottom
                     >
-                        ARE YOU CODING ALONE TONIGHT ?
+                        <Button>
+                            <a href="#about-us"><img src={image} className={classes.pinkBeast} style={{ height: "200px" }} alt="waves of web" /></a>
+                        </Button>
                     </WhiteTextTypographySlogan>
                 </Grid>
             </Grid>
-            <Grid item sx={{ marginTop: "20px" }}>
+            <Grid item>
                 <Grid
                     container
                     justifyContent="center"
@@ -138,9 +151,7 @@ const Intro = () => {
                         component="div"
                         gutterBottom
                     >
-                        <Button>
-                            <a href="#about-us"><ArrowLink /></a>
-                        </Button>
+
                     </WhiteTextTypographySlogan>
                 </Grid>
             </Grid>

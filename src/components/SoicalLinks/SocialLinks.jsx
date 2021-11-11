@@ -1,106 +1,75 @@
 import React from "react";
-import { Divider, Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-
 
 const SocialLinks = () => {
     const year = new Date().getFullYear();
     return (
         <Grid
-            direction="column"
+            direction="row"
             justifyContent="center"
             alignItems="center"
-            sx={{ backgroundColor: "#3D0240" }}
-            p={2}
+            alignSelf="center"
         >
-            <Grid
-                direction="row"
-                justifyContent="center"
-                alignItems="center"
-            >
-                <Grid direction="column" justifyContent="center">
-                    <Grid
-                        direction="row"
-                        justifyContent="space-around"
-                        container
-                    >
-                        <Grid item>
-                            <Grid direction="row" container>
-                                <nav aria-label="footer" item>
-                                    <List>
-                                        <ListItem>
-                                            <ListItemButton>
-                                                <ListItemIcon>
-                                                    <InstagramIcon
-                                                        sx={{
-                                                            color: "white",
-                                                        }}
-                                                    />
-                                                </ListItemIcon>
-                                            </ListItemButton>
-                                            <ListItemButton>
-                                                <ListItemIcon>
-                                                    <MailOutlineIcon
-                                                        sx={{
-                                                            color: "white",
-                                                        }}
-                                                    />
-                                                </ListItemIcon>
-                                            </ListItemButton>
-                                            <ListItemButton>
-                                                <ListItemIcon>
-                                                    <GitHubIcon
-                                                        sx={{
-                                                            color: "white",
-                                                        }}
-                                                    />
-                                                </ListItemIcon>
-                                            </ListItemButton>
-                                            <ListItemButton>
-                                                <ListItemIcon>
-                                                    <LinkedInIcon
-                                                        sx={{
-                                                            color: "white",
-                                                        }}
-                                                    />
-                                                </ListItemIcon>
-                                            </ListItemButton>
-                                        </ListItem>
-                                    </List>
-                                </nav>
-                            </Grid>
+            <Grid direction="column" justifyContent="center">
+                <Grid direction="row" justifyContent="space-around" container>
+                    <Grid item>
+                        <Grid direction="row" container>
+                            <nav aria-label="footer" item>
+                                <List>
+                                    <ListItem>
+                                        <ListItemButton>
+                                            <ListItemIcon>
+                                                <InstagramIcon
+                                                    sx={{
+                                                        color: "white",
+                                                    }}
+                                                />
+                                            </ListItemIcon>
+                                        </ListItemButton>
+                                        <ListItemButton>
+                                            <ListItemIcon>
+                                                <MailOutlineIcon
+                                                    sx={{
+                                                        color: "white",
+                                                    }}
+                                                />
+                                            </ListItemIcon>
+                                        </ListItemButton>
+                                        <ListItemButton>
+                                            <ListItemIcon>
+                                                <GitHubIcon
+                                                    sx={{
+                                                        color: "white",
+                                                    }}
+                                                />
+                                            </ListItemIcon>
+                                        </ListItemButton>
+                                        <ListItemButton>
+                                            <ListItemIcon>
+                                                <LinkedInIcon
+                                                    sx={{
+                                                        color: "white",
+                                                    }}
+                                                />
+                                            </ListItemIcon>
+                                        </ListItemButton>
+                                    </ListItem>
+                                </List>
+                            </nav>
                         </Grid>
-                    </Grid>
-                    <Grid
-                        item
-                        direction="column"
-                        justifyContent="center"
-                        alignItems="center"
-                        alignSelf="center"
-                    >
-                        <Typography
-                            variant="caption"
-                            display="block"
-                            gutterBottom
-                            color="whitesmoke"
-                            mt={4}
-                        >
-                            WoW&reg; {year}
-                        </Typography>
                     </Grid>
                 </Grid>
             </Grid>
         </Grid>
     );
-}
+};
 
 export default SocialLinks;

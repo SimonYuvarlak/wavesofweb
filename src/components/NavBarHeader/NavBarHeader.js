@@ -11,11 +11,13 @@ import logo from "../../assets/wow-logo.png";
 import { Grid } from "@mui/material";
 import { Typography } from "@material-ui/core";
 import SocialLinks from "../SoicalLinks/SocialLinks";
+import PaddingElement from "../PaddingElement/PaddingElement";
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        height: "60px",
+        height: "100px",
+        paddingTop: "20px",
         [theme.breakpoints.up("md")]: {
             backgroundColor: "#3D0240",
         },
@@ -27,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
     },
     menuButton: {
-        marginRight: theme.spacing(2),
         alignSelf: "center",
         color: "white !important",
     },
@@ -38,9 +39,9 @@ const useStyles = makeStyles((theme) => ({
     },
     navBtn: {
         width: "10rem",
-        height: "50%",
+        height: "70%",
         alignSelf: "center",
-        marginRight: "2.2rem",
+        marginRight: "2rem",
         [theme.breakpoints.up("md")]: {
             color: "white !important",
         },
@@ -112,23 +113,30 @@ const NavBarHeader = (props) => {
         <div className={classes.root} sx={{ background: "rgba(0,0,0,0.5)" }}>
             <Toolbar>
                 {isMobile ? (
-                    <Grid container>
-                        <IconButton
-                            edge="end"
-                            className={classes.menuButton}
-                            color="inherit"
-                            aria-label="menu"
-                            onClick={handleMenu}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Button className={classes.navBtn} variant="image">
-                            <img
-                                src={logo}
-                                alt="img"
-                                className={classes.image}
-                            />
-                        </Button>
+                    <Grid
+                        container
+                        direction={"row"}
+                        justifyContent={"space-between"}
+                    >
+                        <Grid>
+                            <IconButton
+                                edge="end"
+                                className={classes.menuButton}
+                                color="inherit"
+                                aria-label="menu"
+                                onClick={handleMenu}
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                            <Button variant="image">
+                                <img
+                                    src={logo}
+                                    alt="img"
+                                    className={classes.image}
+                                />
+                            </Button>
+                        </Grid>
+
                         <Menu
                             id="menu-appbar"
                             anchorEl={anchorEl}
@@ -156,6 +164,9 @@ const NavBarHeader = (props) => {
                                 );
                             })}
                         </Menu>
+                        <Grid alignItems="center" alignSelf="center">
+                            <SocialLinks />
+                        </Grid>
                     </Grid>
                 ) : (
                     <Grid
@@ -166,13 +177,16 @@ const NavBarHeader = (props) => {
                         <img src={logo} alt="img" className={classes.image} />
                         <Grid
                             item
-                            md={10}
+                            md={8}
                             justifyContent={"space-around"}
                             className={classes.headerOptions}
                         >
                             {menuItems.map((item) => {
                                 return (
-                                    <a href={item.link} style={{ textDecoration: "none" }}>
+                                    <a
+                                        href={item.link}
+                                        style={{ textDecoration: "none" }}
+                                    >
                                         <Button
                                             key={item.id}
                                             variant="text"
@@ -184,6 +198,7 @@ const NavBarHeader = (props) => {
                                 );
                             })}
                         </Grid>
+                        <SocialLinks />
                     </Grid>
                 )}
             </Toolbar>

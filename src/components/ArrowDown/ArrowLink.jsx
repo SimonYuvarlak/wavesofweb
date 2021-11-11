@@ -1,7 +1,5 @@
 import React from "react";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import { Button } from "@material-ui/core";
-import { Typography, Grid } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 
 const ArrowDown = withStyles({

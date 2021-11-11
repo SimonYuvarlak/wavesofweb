@@ -24,7 +24,26 @@ const Footer = () => {
     return (
         <div id="footer">
             {isMobile ? (
-                <SocialLinks />
+                <Grid>
+                    <SocialLinks />
+                    <Grid
+                        item
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        alignSelf="center"
+                    >
+                        <Typography
+                            variant="caption"
+                            display="block"
+                            gutterBottom
+                            color="whitesmoke"
+                            mt={4}
+                        >
+                            WoW&reg; {year}
+                        </Typography>
+                    </Grid>
+                </Grid>
             ) : (
                 <Grid
                     direction="column"
@@ -124,7 +143,13 @@ const Footer = () => {
                                                                 }}
                                                             />
                                                         </ListItemIcon>
-                                                        <a href="#about-us" style={{ textDecoration: "none" }}>
+                                                        <a
+                                                            href="#about-us"
+                                                            style={{
+                                                                textDecoration:
+                                                                    "none",
+                                                            }}
+                                                        >
                                                             <ListItemText
                                                                 primary="About Us"
                                                                 sx={{
@@ -147,7 +172,13 @@ const Footer = () => {
                                                                 }}
                                                             />
                                                         </ListItemIcon>
-                                                        <a href="#prev-work" style={{ textDecoration: "none" }}>
+                                                        <a
+                                                            href="#prev-work"
+                                                            style={{
+                                                                textDecoration:
+                                                                    "none",
+                                                            }}
+                                                        >
                                                             <ListItemText
                                                                 primary="Previous Works"
                                                                 sx={{
@@ -170,7 +201,13 @@ const Footer = () => {
                                                                 }}
                                                             />
                                                         </ListItemIcon>
-                                                        <a href="#road-map" style={{ textDecoration: "none" }}>
+                                                        <a
+                                                            href="#road-map"
+                                                            style={{
+                                                                textDecoration:
+                                                                    "none",
+                                                            }}
+                                                        >
                                                             <ListItemText
                                                                 primary="Road Map"
                                                                 sx={{
