@@ -12,7 +12,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import "./styles.css";
 import CustomHeader from "../CustomHeader/CustomHeader";
 import PaddingElement from "../PaddingElement/PaddingElement";
-import ArrowLink from "../ArrowDown/ArrowLink";
 
 const useStyles = makeStyles((theme) => ({
     projectContainer: {
@@ -248,13 +247,6 @@ const CardCarousel = () => {
                             ))}
                         </Grid>
                     </Grid>
-                </Grid>
-            </Grid>
-            <Grid>
-                <Grid container justifyContent="center">
-                    <a href="#road-map">
-                        <ArrowLink />
-                    </a>
                 </Grid>
             </Grid>
         </Box>

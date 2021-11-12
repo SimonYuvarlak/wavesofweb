@@ -127,8 +127,11 @@ function App(props) {
                 <div className="App">
                     <PaddingElement space={15} />
                     <Intro p={5} />
+                    <PaddingElement space={15} />
                     <AboutUs context={context} />
+                    <PaddingElement space={15} />
                     <CardCarousel />
+                    <PaddingElement space={15} />
                     <RoadMap />
                     <PaddingElement space={15} />
 
@@ -136,11 +139,13 @@ function App(props) {
                 </div>
                 <ScrollTop {...props}>
                     <Fab
-                        color="secondary"
-                        size="small"
+                        size="large"
                         aria-label="scroll back to top"
                         sx={{
-                            boxShadow: "0 0 20px #FEC0CA",
+                            backgroundColor: "#2a232d !important",
+                            border: "3px solid #FEC0CA !important",
+                            borderRadius: "40px !important",
+                            boxShadow: "0 0 12px #FEC0CA !important",
                         }}
                     >
                         <KeyboardArrowUpIcon

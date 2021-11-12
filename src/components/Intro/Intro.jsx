@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Grid } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
-import { Typewriter, useTypewriter, Cursor } from "react-simple-typewriter";
+import { Typewriter } from "react-simple-typewriter";
 import { Button } from "@material-ui/core";
 import "./styles.css";
 import image from "../../assets/pink-beast.png";
@@ -34,7 +34,6 @@ const BlackGrid = withStyles({
         border: "3px solid #FEC0CA",
         borderRadius: "40px 40px 40px 40px",
         boxShadow: "0 0 10px #FEC0CA",
-        boxShadow: "0 0 10px #FEC0CA",
     },
 })(Grid);
 
@@ -51,8 +50,8 @@ const useStyles = makeStyles((theme) => ({
             border: "3px solid #FEC0CA",
             borderRadius: "40px 40px 40px 40px",
             boxShadow: "0 0 10px #FEC0CA",
-        }
-    }
+        },
+    },
 }));
 
 const Intro = () => {
@@ -61,18 +60,18 @@ const Intro = () => {
     //Mobile a uyarlanmasi lazim
     const classes = useStyles();
     const terminal = [" ", "_"];
-    const text =
-        "Welcome to Code Brewery. Our services. Web Desing. Web Development. App Development. Api Development.";
+    // const text =
+    //     "Welcome to Code Brewery. Our services. Web Desing. Web Development. App Development. Api Development.";
 
-    const arr = text.split(".");
+    // const arr = text.split(".");
 
-    const getLetter = (letter) => {
-        return (
-            <Typography item variant="h1" component="div" gutterBottom>
-                letter
-            </Typography>
-        );
-    };
+    // const getLetter = (letter) => {
+    //     return (
+    //         <Typography item variant="h1" component="div" gutterBottom>
+    //             letter
+    //         </Typography>
+    //     );
+    // };
 
     return (
         <Grid container justifyContent="center" direction="column" id="intro">
@@ -133,7 +132,14 @@ const Intro = () => {
                         gutterBottom
                     >
                         <Button>
-                            <a href="#about-us"><img src={image} className={classes.pinkBeast} style={{ height: "200px" }} alt="waves of web" /></a>
+                            <a href="#about-us">
+                                <img
+                                    src={image}
+                                    className={classes.pinkBeast}
+                                    style={{ height: "200px" }}
+                                    alt="waves of web"
+                                />
+                            </a>
                         </Button>
                     </WhiteTextTypographySlogan>
                 </Grid>
@@ -150,9 +156,7 @@ const Intro = () => {
                         variant="overline"
                         component="div"
                         gutterBottom
-                    >
-
-                    </WhiteTextTypographySlogan>
+                    ></WhiteTextTypographySlogan>
                 </Grid>
             </Grid>
         </Grid>

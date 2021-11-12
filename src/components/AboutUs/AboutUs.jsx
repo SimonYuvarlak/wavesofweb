@@ -15,7 +15,6 @@ import EvStationIcon from "@mui/icons-material/EvStation";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 import PaddingElement from "../PaddingElement/PaddingElement";
-import ArrowLink from "../ArrowDown/ArrowLink";
 // import { withStyles } from "@material-ui/core/styles";
 
 const AboutUs = (props) => {
@@ -205,13 +204,6 @@ const AboutUs = (props) => {
                             </List>
                         </Grid>
                     </Grid>
-                </Grid>
-            </Grid>
-            <Grid item>
-                <Grid container justifyContent="center">
-                    <a href="#prev-work">
-                        <ArrowLink />
-                    </a>
                 </Grid>
             </Grid>
         </Grid>
