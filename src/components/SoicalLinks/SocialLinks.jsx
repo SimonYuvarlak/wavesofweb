@@ -35,11 +35,13 @@ const SocialLinks = () => {
                                         </ListItemButton>
                                         <ListItemButton>
                                             <ListItemIcon>
-                                                <MailOutlineIcon
-                                                    sx={{
-                                                        color: "white",
-                                                    }}
-                                                />
+                                                <a href="mailto: wowfreelancing@gmail.com">
+                                                    <MailOutlineIcon
+                                                        sx={{
+                                                            color: "white",
+                                                        }}
+                                                    />
+                                                </a>
                                             </ListItemIcon>
                                         </ListItemButton>
                                         <ListItemButton>
