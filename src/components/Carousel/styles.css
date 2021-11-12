@@ -35,12 +35,12 @@ body {
 
 @media (max-width: 405px) {
     .card {
-        width: 98vw;
-        height: 85vh;
+        width: 87vw;
+        height: 125vh;
     }
     .card-carousel,
     .card.next {
-        height: 91vh;
+        height: 133vh;
     }
 }
 
