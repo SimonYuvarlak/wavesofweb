@@ -40,11 +40,20 @@ const useStyles = makeStyles((theme) => ({
             height: "30vh",
         },
     },
+    cardImgSingle: {
+        [theme.breakpoints.up("md")]: {
+            width: "600px",
+            height: "40vh",
+        },
+        [theme.breakpoints.down("sm")]: {
+            width: "300px",
+            height: "25vh",
+        },
+    },
     cardImgContain: {
         height: "auto",
         maxHeight: "45vh",
         objectFit: "contain !important",
-        [theme.breakpoints.up("md")]: {},
     },
 }));
 
@@ -191,57 +200,80 @@ const CardCarousel = () => {
                                                 </p>
                                             </Grid>
                                         </Grid>
-
-                                        <Grid sm={12} md={6} lg={8}>
-                                            <ImageList
-                                                sx={{
-                                                    justifyContent: "center",
-                                                    display: "flex",
-                                                    height: "auto",
-                                                }}
-                                                variant="quilted"
-                                                cols={3}
-                                            >
-                                                <ImageListItem
-                                                    className={classes.cardImg}
+                                        {card.img2 ? (
+                                            <Grid sm={12} md={6} lg={8}>
+                                                <ImageList
+                                                    sx={{
+                                                        justifyContent:
+                                                            "center",
+                                                        display: "flex",
+                                                        height: "auto",
+                                                    }}
+                                                    variant="quilted"
+                                                    cols={3}
                                                 >
-                                                    <img
-                                                        src={card.img1}
-                                                        alt={card.title}
-                                                        loading="auto"
+                                                    <ImageListItem
                                                         className={
-                                                            classes.cardImgContain
+                                                            classes.cardImg
                                                         }
-                                                    />
-                                                </ImageListItem>
-                                                <ImageListItem
-                                                    className={classes.cardImg}
-                                                >
-                                                    <img
-                                                        src={`${card.img2}?w=161&fit=crop&auto=format`}
-                                                        srcSet={`${card.img2}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                                                        alt={card.title}
+                                                    >
+                                                        <img
+                                                            src={card.img1}
+                                                            alt={card.title}
+                                                            loading="auto"
+                                                            className={
+                                                                classes.cardImgContain
+                                                            }
+                                                        />
+                                                    </ImageListItem>
+                                                    <ImageListItem
                                                         className={
-                                                            classes.cardImgContain
+                                                            classes.cardImg
                                                         }
-                                                        loading="lazy"
-                                                    />
-                                                </ImageListItem>
-                                                <ImageListItem
-                                                    className={classes.cardImg}
-                                                >
-                                                    <img
-                                                        src={`${card.img3}?w=161&fit=crop&auto=format`}
-                                                        srcSet={`${card.img3}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                                                        alt={card.title}
+                                                    >
+                                                        <img
+                                                            src={`${card.img2}?w=161&fit=crop&auto=format`}
+                                                            srcSet={`${card.img2}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                                            alt={card.title}
+                                                            className={
+                                                                classes.cardImgContain
+                                                            }
+                                                            loading="lazy"
+                                                        />
+                                                    </ImageListItem>
+                                                    <ImageListItem
                                                         className={
-                                                            classes.cardImgContain
+                                                            classes.cardImg
                                                         }
-                                                        loading="eager"
-                                                    />
-                                                </ImageListItem>
-                                            </ImageList>
-                                        </Grid>
+                                                    >
+                                                        <img
+                                                            src={`${card.img3}?w=161&fit=crop&auto=format`}
+                                                            srcSet={`${card.img3}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                                            alt={card.title}
+                                                            className={
+                                                                classes.cardImgContain
+                                                            }
+                                                            loading="eager"
+                                                        />
+                                                    </ImageListItem>
+                                                </ImageList>
+                                            </Grid>
+                                        ) : (
+                                            <Grid sm={12} md={6} lg={8}>
+                                                <img
+                                                    sx={{
+                                                        height: "auto",
+                                                        width: "auto",
+                                                    }}
+                                                    src={card.img1}
+                                                    alt={card.title}
+                                                    loading="auto"
+                                                    className={
+                                                        classes.cardImgSingle
+                                                    }
+                                                />
+                                            </Grid>
+                                        )}
                                     </Grid>
                                 </li>
                             ))}

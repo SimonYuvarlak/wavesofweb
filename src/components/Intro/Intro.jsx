@@ -6,10 +6,8 @@ import { Button } from "@material-ui/core";
 import "./styles.css";
 import image from "../../assets/pink-beast.png";
 import { makeStyles } from "@material-ui/core/styles";
-// import useMediaQuery from "@material-ui/core/useMediaQuery";
-// import { useTheme } from "@material-ui/core/styles"
-//Yukarinin mobile uyarlanmasi lazim
-
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useTheme } from "@material-ui/core/styles";
 const WhiteTextTypography = withStyles({
     root: {
         color: "#FFFFFF",
@@ -40,7 +38,7 @@ const BlackGrid = withStyles({
 const ContainerGrid = withStyles({
     root: {
         // padding: "0px 250px 0px 250px",
-        padding: "0% 25% 5% 25%",
+        padding: "0% 5% 5% 5%",
     },
 })(Grid);
 
@@ -60,6 +58,8 @@ const Intro = () => {
     //Mobile a uyarlanmasi lazim
     const classes = useStyles();
     const terminal = [" ", "_"];
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("md"));
     // const text =
     //     "Welcome to Code Brewery. Our services. Web Desing. Web Development. App Development. Api Development.";
 
@@ -77,8 +77,13 @@ const Intro = () => {
         <Grid container justifyContent="center" direction="column" id="intro">
             <ContainerGrid item>
                 <BlackGrid container direction="row">
-                    <Grid item xs={12} md={5} lg={5}>
-                        <Grid container justifyContent="center" direction="row">
+                    <Grid item xs={6} md={5} lg={5}>
+                        <Grid
+                            container
+                            justifyContent="center"
+                            alignItems="center"
+                            direction="row"
+                        >
                             <WhiteTextTypography
                                 item
                                 variant="h1"
@@ -103,7 +108,7 @@ const Intro = () => {
                             </WhiteTextTypography>
                         </Grid>
                     </Grid>
-                    <Grid item xs={12} md={7} lg={7}>
+                    <Grid item xs={6} md={7} lg={7}>
                         <Grid container alignItems="left">
                             <WhiteTextTypography
                                 item
@@ -112,7 +117,7 @@ const Intro = () => {
                                 gutterBottom
                                 sx={{ color: "#ffffff" }}
                             >
-                                Waves of Web
+                                {isMobile ? "Wow" : "Waves of Web"}
                             </WhiteTextTypography>
                         </Grid>
                     </Grid>

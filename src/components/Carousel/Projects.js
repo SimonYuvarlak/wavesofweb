@@ -5,7 +5,10 @@ import futkids3 from "./assets/futkids3.png";
 import laundrative1 from "./assets/laundrative1.png";
 import laundrative2 from "./assets/laundrative2.png";
 import laundrative3 from "./assets/laundrative3.png";
-import folk from "./assets/wdtfs.png";
+import folk from "./assets/folk.jpeg";
+import up1 from "./assets/up1.jpg";
+import up2 from "./assets/up2.jpg";
+import up3 from "./assets/up3.jpg";
 
 export const cardItems = [
     {
@@ -13,7 +16,7 @@ export const cardItems = [
         title: "FUTKIDS",
         copy: "Lorem ipsum dolor sit amet",
         description:
-            "Implementation of a mobile application, for youth football academies, using React Native, NodeJS, Express and MongoDB, Firebase",
+            "A mobile application for youth football academies to create player profiles, keep statistics regarding players and stream live matches online. Developed using React Native, NodeJS, Express, MongoDB and Firebase. Will be published in PlayStore and AppleStore soon.",
         img1: futkids1,
         img2: futkids2,
         img3: futkids3,
@@ -23,33 +26,22 @@ export const cardItems = [
         title: "LAUNDRATIVE",
         copy: "Lorem ipsum dolor sit amet",
         description:
-            "Implementation of business solution for laundry and dry cleaners, using Angular, Java and MySQL",
+            "Implementation of an online ordering and POS software for laundry and dry cleaning service providers.Developed using Angular,Ionic, Java, MySQL and",
         img1: laundrative1,
         img2: laundrative2,
         img3: laundrative3,
     },
+
     {
         id: 3,
-        title: "EDJOY ",
-        copy: "Lorem ipsum dolor sit amet",
-        description:
-            "Implementation of a website, an online learning platform, using React, ASP .NET and Amazon Web Services",
-        img1: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
-        img2: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
-        img3: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
-    },
-    {
-        id: 4,
         title: "CRYPTOCHAIN ",
         copy: "Lorem ipsum dolor sit amet",
         description:
-            "Build a Blockchain and Cryptocurrency | Full-Stack Edition",
+            "Web application which has its own blockchain and ctyptocurrency with similar to bitcoin hashing, developed using NodeJS and Angular ",
         img1: chainImg,
-        img2: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
-        img3: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
     },
     {
-        id: 5,
+        id: 4,
         title: "What Does The Folk Say",
         copy: "Lorem ipsum dolor sit amet",
         description: `
@@ -58,11 +50,9 @@ export const cardItems = [
             the point of that query through sentiment analysis machine learning algorithm.
         `,
         img1: folk,
-        img2: folk,
-        img3: folk,
     },
     {
-        id: 6,
+        id: 5,
         title: "UP",
         copy: "Lorem ipsum dolor sit amet",
         description: `
@@ -70,5 +60,8 @@ export const cardItems = [
             When students choose which courses they are taking, they automatically participate in group chat created with other students taking the same course.
             Also students can find job opportunities since this app connects companies and students.
         `,
+        img1: up1,
+        img2: up2,
+        img3: up3,
     },
 ];
