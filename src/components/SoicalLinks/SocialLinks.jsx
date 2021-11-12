@@ -26,11 +26,13 @@ const SocialLinks = () => {
                                     <ListItem>
                                         <ListItemButton>
                                             <ListItemIcon>
-                                                <InstagramIcon
-                                                    sx={{
-                                                        color: "white",
-                                                    }}
-                                                />
+                                                <a href="https://www.instagram.com/simon.ardayuvarlak/">
+                                                    <InstagramIcon
+                                                        sx={{
+                                                            color: "white",
+                                                        }}
+                                                    />
+                                                </a>
                                             </ListItemIcon>
                                         </ListItemButton>
                                         <ListItemButton>
@@ -46,20 +48,24 @@ const SocialLinks = () => {
                                         </ListItemButton>
                                         <ListItemButton>
                                             <ListItemIcon>
-                                                <GitHubIcon
-                                                    sx={{
-                                                        color: "white",
-                                                    }}
-                                                />
+                                                <a href="https://github.com/SimonYuvarlak">
+                                                    <GitHubIcon
+                                                        sx={{
+                                                            color: "white",
+                                                        }}
+                                                    />
+                                                </a>
                                             </ListItemIcon>
                                         </ListItemButton>
                                         <ListItemButton>
                                             <ListItemIcon>
-                                                <LinkedInIcon
-                                                    sx={{
-                                                        color: "white",
-                                                    }}
-                                                />
+                                                <a href="https://www.linkedin.com/in/seman-arda-yuvarlak-563572b3/">
+                                                    <LinkedInIcon
+                                                        sx={{
+                                                            color: "white",
+                                                        }}
+                                                    />
+                                                </a>
                                             </ListItemIcon>
                                         </ListItemButton>
                                     </ListItem>
