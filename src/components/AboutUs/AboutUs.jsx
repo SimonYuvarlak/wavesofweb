@@ -23,25 +23,33 @@ const AboutUs = (props) => {
 
     const text = `
         We are a software company developing its on products as well as freelance products using modern technologies.
+        We have three different services. Our first service is mobile app development. We use react native. We can develop simultaneously 
+        for Android and IOS using react native. 
+        Our other service is Web development. We use React for Web development. Since we use react native for mobile app development you can get more
+        consistency between your mobile apps and websites.
+        Lastly we offer api development. We use NodeJs which we also use as our backend language for web and mobile app development.
+        These three technologies are based on Javascript hence we get consistency and harmony in every part of our development.
     `;
 
     return (
         <Grid container direction="column" id="about-us">
             <PaddingElement space={10} />
             <CustomHeader heading={"About Us"} variant={"h2"} />
-            <PaddingElement space={4} />
-            <Typography
-                variant="h6"
-                gutterBottom
-                component="div"
-                item
-                paddingTop={2}
-                paddingBottom={5}
-                sx={{ textShadow: "1px 1px #7B1EA2" }}
-                color="whitesmoke"
-            >
-                {text}
-            </Typography>
+            <Grid item>
+                <Grid container direction="row" p={10}>
+                    <Typography
+                        variant="h6"
+                        gutterBottom
+                        component="div"
+                        item
+                        sx={{ textShadow: "1px 1px #7B1EA2" }}
+                        color="whitesmoke"
+                        align="left"
+                    >
+                        {text}
+                    </Typography>
+                </Grid>
+            </Grid>
             <Grid item>
                 <Grid container direciton="row" justifyContent="center">
                     <Grid item xs={11} md={5}>
