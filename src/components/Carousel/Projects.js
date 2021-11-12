@@ -57,4 +57,10 @@ export const cardItems = [
         img2: folk,
         img3: folk,
     },
+    {
+        id: 6,
+        title: "UP",
+        copy: "Lorem ipsum dolor sit amet",
+        description: "UP is a social media platform where college student can communicate, create groups and find job opportunities",
+    },
 ];
