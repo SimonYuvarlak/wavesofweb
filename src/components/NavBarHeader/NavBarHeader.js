@@ -1,17 +1,13 @@
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import Button from "@mui/material/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import logo from "../../assets/wow-logo.png";
 import { Grid } from "@mui/material";
-import { Typography } from "@material-ui/core";
 import SocialLinks from "../SoicalLinks/SocialLinks";
-import PaddingElement from "../PaddingElement/PaddingElement";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -119,16 +115,7 @@ const NavBarHeader = (props) => {
                         justifyContent={"space-between"}
                     >
                         <Grid>
-                            <IconButton
-                                edge="end"
-                                className={classes.menuButton}
-                                color="inherit"
-                                aria-label="menu"
-                                onClick={handleMenu}
-                            >
-                                <MenuIcon />
-                            </IconButton>
-                            <Button variant="image">
+                            <Button variant="image" onClick={handleMenu}>
                                 <img
                                     src={logo}
                                     alt="img"

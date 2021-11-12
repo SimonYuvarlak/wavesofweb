@@ -14,7 +14,7 @@ const Section = (props) => {
         >
             <Grid container justifyContent="center" direction="row" p={1.5}>
                 <Divider sx={{ color: props.color }}>
-                    ..........................................................................................
+                    .............................................................
                     <FlightTakeoffIcon sx={{ color: props.color }} />
                 </Divider>
             </Grid>
@@ -24,7 +24,7 @@ const Section = (props) => {
                     gutterBottom
                     component="div"
                     p={3}
-                    align="left"
+                    align="center"
                     sx={{ color: props.headingColor }}
                 >
                     {props.heading}
@@ -33,7 +33,7 @@ const Section = (props) => {
                     variant="subtitle2"
                     display="block"
                     gutterBottom
-                    align="left"
+                    align="center"
                     pl={3}
                     pr={3}
                     pb={3}
@@ -49,7 +49,7 @@ const Section = (props) => {
                             pl={3}
                             pr={3}
                             pb={3}
-                            align="left"
+                            align="center"
                             sx={{ color: "whitesmoke" }}
                         >
                             {item}

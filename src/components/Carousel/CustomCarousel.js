@@ -28,23 +28,24 @@ const useStyles = makeStyles((theme) => ({
     projectDesc: {
         color: "white",
         [theme.breakpoints.up("md")]: {
-            paddingBottom: "5vh",
+            paddingBottom: "10vh",
         },
     },
     cardImg: {
         [theme.breakpoints.up("md")]: {
-            width: "180px",
+            width: "200px",
             height: "35vh",
         },
         [theme.breakpoints.down("sm")]: {
-            width: "120px",
+            width: "140px",
             height: "30vh",
         },
     },
     cardImgContain: {
         height: "auto",
-        maxHeight: "35vh",
+        maxHeight: "45vh",
         objectFit: "contain !important",
+        [theme.breakpoints.up("md")]: {},
     },
 }));
 
@@ -192,12 +193,7 @@ const CardCarousel = () => {
                                             </Grid>
                                         </Grid>
 
-                                        <Grid
-                                            sm={12}
-                                            md={6}
-                                            lg={8}
-                                            marginLeft={5}
-                                        >
+                                        <Grid sm={12} md={6} lg={8}>
                                             <ImageList
                                                 sx={{
                                                     justifyContent: "center",
@@ -223,7 +219,6 @@ const CardCarousel = () => {
                                                     className={classes.cardImg}
                                                 >
                                                     <img
-                                                        className="card-img"
                                                         src={`${card.img2}?w=161&fit=crop&auto=format`}
                                                         srcSet={`${card.img2}?w=161&fit=crop&auto=format&dpr=2 2x`}
                                                         alt={card.title}
@@ -237,7 +232,6 @@ const CardCarousel = () => {
                                                     className={classes.cardImg}
                                                 >
                                                     <img
-                                                        className="card-img"
                                                         src={`${card.img3}?w=161&fit=crop&auto=format`}
                                                         srcSet={`${card.img3}?w=161&fit=crop&auto=format&dpr=2 2x`}
                                                         alt={card.title}

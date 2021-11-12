@@ -10,7 +10,6 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const SocialLinks = () => {
-    const year = new Date().getFullYear();
     return (
         <Grid
             direction="row"

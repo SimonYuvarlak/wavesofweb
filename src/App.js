@@ -14,7 +14,6 @@ import Zoom from "@mui/material/Zoom";
 import NavBarHeader from "./components/NavBarHeader/NavBarHeader";
 import RoadMap from "./components/RoadMap/RoadMap";
 import Footer from "./components/Footer/Footer";
-import CustomHeader from "./components/CustomHeader/CustomHeader";
 import PaddingElement from "./components/PaddingElement/PaddingElement";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Intro from "./components/Intro/Intro";

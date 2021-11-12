@@ -14,7 +14,6 @@ import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
 import EvStationIcon from "@mui/icons-material/EvStation";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
-import { useState } from "react";
 import PaddingElement from "../PaddingElement/PaddingElement";
 import ArrowLink from "../ArrowDown/ArrowLink";
 // import { withStyles } from "@material-ui/core/styles";
@@ -26,9 +25,6 @@ const AboutUs = (props) => {
     const text = `
         We are a software company developing its on products as well as freelance products using modern technologies.
     `;
-    const arrText = text.split(" ");
-
-    const [aboutUsText, setAboutUsText] = React.useState([]);
 
     return (
         <Grid container direction="column" id="about-us">
@@ -61,9 +57,10 @@ const AboutUs = (props) => {
                                 backgorundColor: "rgba(0, 0, 0, 0.8)",
                                 padding: "20px 40px 10px 0px",
                                 border: "3px solid #FEC0CA",
-                                borderRadius: isMobile ? "40px 40px 0px 0px" : "40px 0px 0px 40px",
+                                borderRadius: isMobile
+                                    ? "40px 40px 0px 0px"
+                                    : "40px 0px 0px 40px",
                                 boxShadow: "0 0 10px #FEC0CA",
-                                boxShadow: "0 0 10px #FEC0CA"
                             }}
                         >
                             <CustomHeader
@@ -152,9 +149,10 @@ const AboutUs = (props) => {
                                 backgorundColor: "rgba(0, 0, 0, 0.8)",
                                 padding: "20px 40px 10px 0px",
                                 border: "3px solid #FEC0CA",
-                                borderRadius: isMobile ? "0px 0px 40px 40px" : "0px 40px 40px 0px",
+                                borderRadius: isMobile
+                                    ? "0px 0px 40px 40px"
+                                    : "0px 40px 40px 0px",
                                 boxShadow: "0 0 10px #FEC0CA",
-                                boxShadow: "0 0 10px #FEC0CA"
                             }}
                         >
                             <CustomHeader
@@ -211,7 +209,9 @@ const AboutUs = (props) => {
             </Grid>
             <Grid item>
                 <Grid container justifyContent="center">
-                    <a href="#prev-work"><ArrowLink /></a>
+                    <a href="#prev-work">
+                        <ArrowLink />
+                    </a>
                 </Grid>
             </Grid>
         </Grid>
