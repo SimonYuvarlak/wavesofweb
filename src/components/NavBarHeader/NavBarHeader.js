@@ -146,7 +146,12 @@ const NavBarHeader = (props) => {
                                         onClick={() => handleMenuClick(null)}
                                         color="#000"
                                     >
-                                        {item.menuTitle}
+                                        <a
+                                            href={item.link}
+                                            style={{ textDecoration: "none" }}
+                                        >
+                                            {item.menuTitle}
+                                        </a>
                                     </MenuItem>
                                 );
                             })}
