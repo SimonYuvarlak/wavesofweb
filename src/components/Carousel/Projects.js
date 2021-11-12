@@ -5,6 +5,7 @@ import futkids3 from "./assets/futkids3.png";
 import laundrative1 from "./assets/laundrative1.png";
 import laundrative2 from "./assets/laundrative2.png";
 import laundrative3 from "./assets/laundrative3.png";
+import folk from "./assets/wdtfs.png";
 
 export const cardItems = [
     {
@@ -46,5 +47,14 @@ export const cardItems = [
         img1: chainImg,
         img2: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
         img3: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
+    },
+    {
+        id: 5,
+        title: "What Does The Folk Say",
+        copy: "Lorem ipsum dolor sit amet",
+        description: "For a given query this program can look get the public opinion based on recent tweets about that subject.",
+        img1: folk,
+        img2: folk,
+        img3: folk,
     },
 ];
