@@ -1,30 +1,32 @@
 import React from "react";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import Button from "@mui/material/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/wow-logo.png";
 import { Grid } from "@mui/material";
+import SocialLinks from "../SoicalLinks/SocialLinks";
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+        height: "100px",
+        paddingTop: "20px",
         [theme.breakpoints.up("md")]: {
-            backgroundColor: "#white",
+            backgroundColor: "#3D0240",
         },
         [theme.breakpoints.down("md")]: {
-            backgroundColor: "#white",
+            backgroundColor: "#3D0240",
         },
     },
     dFlex: {
         display: "flex",
     },
     menuButton: {
-        marginRight: theme.spacing(2),
+        alignSelf: "center",
+        color: "white !important",
     },
     title: {
         [theme.breakpoints.down("md")]: {
@@ -33,16 +35,31 @@ const useStyles = makeStyles((theme) => ({
     },
     navBtn: {
         width: "10rem",
-        height: "3rem",
-        marginRight: "2.2rem",
-        marginTop: "1.7rem",
+        height: "70%",
+        alignSelf: "center",
+        marginRight: "2rem",
         [theme.breakpoints.up("md")]: {
-            color: "#7B1EA2",
+            color: "white !important",
+        },
+        margin: "10px",
+        "&:hover": {
+            backgroundColor: "#2a232d",
+            border: "3px solid #FEC0CA",
+            borderRadius: "10px 10px 10px 10px",
+            boxShadow: "0 0 5px #FEC0CA",
+            textShadow: "0 0 5px #FEC0CA",
+            padding: "5px",
         },
     },
     image: {
-        width: "150px",
-        heiht: "200px",
+        width: "80px",
+        heiht: "80px",
+        transition: "transform 1.2s",
+        transformStyle: "preserve-3d",
+        "&:hover": {
+            transform: "rotateZ(360deg)",
+        },
+        margin: "-5px",
     },
 }));
 
@@ -66,44 +83,46 @@ const NavBarHeader = (props) => {
             menuTitle: "About Us",
             pageURL: "/about",
             id: "about-us",
+            link: "#about-us",
         },
         {
             menuTitle: "Previous Works",
             pageURL: "/works",
             id: "prev-work",
-        },
-        {
-            menuTitle: "Provided Services",
-            pageURL: "/services",
-            id: "used-tech",
+            link: "#prev-work",
         },
         {
             menuTitle: "Roadmap",
             pageURL: "/roadmap",
             id: "roadmap",
+            link: "#road-map",
         },
         {
-            menuTitle: "Footer",
-            pageURL: "/footer",
-            id: "footer",
+            menuTitle: "Contact Us",
+            pageURL: "/contact-us",
+            id: "contact",
+            link: "#footer",
         },
     ];
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} sx={{ background: "rgba(0,0,0,0.5)" }}>
             <Toolbar>
                 {isMobile ? (
-                    <Grid container>
-                        <IconButton
-                            edge="end"
-                            className={classes.menuButton}
-                            color="inherit"
-                            aria-label="menu"
-                            onClick={handleMenu}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <img src={logo} alt="img" className={classes.image} />
+                    <Grid
+                        container
+                        direction={"row"}
+                        justifyContent={"space-between"}
+                    >
+                        <Grid>
+                            <Button variant="image" onClick={handleMenu}>
+                                <img
+                                    src={logo}
+                                    alt="img"
+                                    className={classes.image}
+                                />
+                            </Button>
+                        </Grid>
 
                         <Menu
                             id="menu-appbar"
@@ -125,12 +144,21 @@ const NavBarHeader = (props) => {
                                     <MenuItem
                                         key={item.id}
                                         onClick={() => handleMenuClick(null)}
+                                        color="#000"
                                     >
-                                        {item.menuTitle}
+                                        <a
+                                            href={item.link}
+                                            style={{ textDecoration: "none" }}
+                                        >
+                                            {item.menuTitle}
+                                        </a>
                                     </MenuItem>
                                 );
                             })}
                         </Menu>
+                        <Grid alignItems="center" alignSelf="center">
+                            <SocialLinks />
+                        </Grid>
                     </Grid>
                 ) : (
                     <Grid
@@ -141,22 +169,28 @@ const NavBarHeader = (props) => {
                         <img src={logo} alt="img" className={classes.image} />
                         <Grid
                             item
-                            md={10}
+                            md={8}
                             justifyContent={"space-around"}
                             className={classes.headerOptions}
                         >
                             {menuItems.map((item) => {
                                 return (
-                                    <Button
-                                        key={item.id}
-                                        variant="text"
-                                        className={classes.navBtn}
+                                    <a
+                                        href={item.link}
+                                        style={{ textDecoration: "none" }}
                                     >
-                                        {item.menuTitle}
-                                    </Button>
+                                        <Button
+                                            key={item.id}
+                                            variant="text"
+                                            className={classes.navBtn}
+                                        >
+                                            {item.menuTitle}
+                                        </Button>
+                                    </a>
                                 );
                             })}
                         </Grid>
+                        <SocialLinks />
                     </Grid>
                 )}
             </Toolbar>

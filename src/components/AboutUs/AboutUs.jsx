@@ -2,19 +2,20 @@ import React from "react";
 import { Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import "./style.css";
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
 import CustomHeader from "../CustomHeader/CustomHeader";
-import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
-import WebIcon from '@mui/icons-material/Web';
-import CodeIcon from '@mui/icons-material/Code';
-import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
-import EvStationIcon from '@mui/icons-material/EvStation';
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+import WebIcon from "@mui/icons-material/Web";
+import CodeIcon from "@mui/icons-material/Code";
+import ElectricalServicesIcon from "@mui/icons-material/ElectricalServices";
+import EvStationIcon from "@mui/icons-material/EvStation";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
+import PaddingElement from "../PaddingElement/PaddingElement";
+// import { withStyles } from "@material-ui/core/styles";
 
 const AboutUs = (props) => {
     const theme = useTheme();
@@ -24,49 +25,93 @@ const AboutUs = (props) => {
         We are a software company developing its on products as well as freelance products using modern technologies.
     `;
 
-
-
     return (
-        <Grid
-            container
-            direction="column"
-        >
-            <Typography variant="h6" gutterBottom component="div" item paddingTop={2} paddingBottom={5} sx={{ textShadow: "1px 1px #7B1EA2" }}>
+        <Grid container direction="column" id="about-us">
+            <PaddingElement space={10} />
+            <CustomHeader heading={"About Us"} variant={"h2"} />
+            <PaddingElement space={4} />
+            <Typography
+                variant="h6"
+                gutterBottom
+                component="div"
+                item
+                paddingTop={2}
+                paddingBottom={5}
+                sx={{ textShadow: "1px 1px #7B1EA2" }}
+                color="whitesmoke"
+            >
                 {text}
             </Typography>
             <Grid item>
-                <Grid
-                    container
-                    direciton="row"
-                    justifyContent="center"
-                >
-                    <Grid item xs={12} md={4} lg={4}>
+                <Grid container direciton="row" justifyContent="center">
+                    <Grid item xs={11} md={5}>
                         <Grid
                             justifyContent="center"
                             alignItems="left"
                             direction="column"
+                            padding={5}
                             container
-                            sx={!isMobile ? { border: "5px ridge #7B1EA2", borderRadius: "40px 0px 0px 40px" } : { border: "5px ridge #7B1EA2", borderRadius: "40px 40px 0px 0px" }}
+                            sx={{
+                                backgroundColor: "#2a232d",
+                                backgorundColor: "rgba(0, 0, 0, 0.8)",
+                                padding: "20px 40px 10px 0px",
+                                border: "3px solid #FEC0CA",
+                                borderRadius: isMobile
+                                    ? "40px 40px 0px 0px"
+                                    : "40px 0px 0px 40px",
+                                boxShadow: "0 0 10px #FEC0CA",
+                            }}
                         >
-                            <CustomHeader heading={"Services"} variant="h3" item />
+                            <CustomHeader
+                                heading={"Services"}
+                                variant="h3"
+                                item
+                            />
                             <List item>
                                 <ListItem>
                                     <ListItemAvatar>
-                                        <PhoneIphoneIcon color="secondary" />
+                                        <PhoneIphoneIcon
+                                            style={{
+                                                color: "pink",
+                                                fontSize: 50,
+                                            }}
+                                        />
                                     </ListItemAvatar>
-                                    <ListItemText primary="IOS and Android App Development" />
+                                    <ListItemText
+                                        primary="IOS and Android App Development"
+                                        style={{
+                                            color: "whitesmoke",
+                                            fontSize: 1,
+                                        }}
+                                    />
                                 </ListItem>
                                 <ListItem>
                                     <ListItemAvatar>
-                                        <WebIcon color="secondary" />
+                                        <WebIcon
+                                            style={{
+                                                color: "pink",
+                                                fontSize: 50,
+                                            }}
+                                        />
                                     </ListItemAvatar>
-                                    <ListItemText primary="Web Development" />
+                                    <ListItemText
+                                        primary="Web Development"
+                                        sx={{ color: "whitesmoke", size: 5 }}
+                                    />
                                 </ListItem>
                                 <ListItem>
                                     <ListItemAvatar>
-                                        <CodeIcon color="secondary" />
+                                        <CodeIcon
+                                            style={{
+                                                color: "pink",
+                                                fontSize: 50,
+                                            }}
+                                        />
                                     </ListItemAvatar>
-                                    <ListItemText primary="Api Development" />
+                                    <ListItemText
+                                        primary="Api Development"
+                                        sx={{ color: "whitesmoke" }}
+                                    />
                                 </ListItem>
                             </List>
                         </Grid>
@@ -78,39 +123,83 @@ const AboutUs = (props) => {
                             alignItems="center"
                             direction="column"
                             container
-                            sx={{ height: "100%", transform: isMobile && "rotate(90deg)" }}
+                            sx={{
+                                height: "100%",
+                                transform: isMobile && "rotate(90deg)",
+                            }}
                         >
-                            <ElectricalServicesIcon item color="secondary" style={{ fontSize: isMobile ? "4rem" : "7rem" }} />
+                            <ElectricalServicesIcon
+                                item
+                                sx={{ color: "pink" }}
+                                style={{ fontSize: isMobile ? "4rem" : "7rem" }}
+                            />
                         </Grid>
                     </Grid>
                     {/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */}
-                    <Grid item xs={12} md={4} lg={4}>
+                    <Grid item xs={11} md={5}>
                         <Grid
                             justifyContent="center"
                             alignItems="left"
                             direction="column"
+                            padding={5}
                             container
-                            sx={!isMobile ? { border: "5px ridge #7B1EA2", borderRadius: "0px 40px 40px 0px" } : { border: "5px ridge #7B1EA2", borderRadius: "0px 0px 40px 40px" }}
+                            sx={{
+                                backgroundColor: "#2a232d",
+                                backgorundColor: "rgba(0, 0, 0, 0.8)",
+                                padding: "20px 40px 10px 0px",
+                                border: "3px solid #FEC0CA",
+                                borderRadius: isMobile
+                                    ? "0px 0px 40px 40px"
+                                    : "0px 40px 40px 0px",
+                                boxShadow: "0 0 10px #FEC0CA",
+                            }}
                         >
-                            <CustomHeader heading={"Technologies"} variant="h3" />
+                            <CustomHeader
+                                heading={"Technologies"}
+                                variant="h3"
+                            />
                             <List item>
                                 <ListItem>
                                     <ListItemAvatar>
-                                        <EvStationIcon color="secondary" />
+                                        <EvStationIcon
+                                            style={{
+                                                color: "pink",
+                                                fontSize: 50,
+                                            }}
+                                        />
                                     </ListItemAvatar>
-                                    <ListItemText primary="React Native" />
+                                    <ListItemText
+                                        primary="React Native"
+                                        sx={{ color: "whitesmoke" }}
+                                    />
                                 </ListItem>
                                 <ListItem>
                                     <ListItemAvatar>
-                                        <EvStationIcon color="secondary" />
+                                        <EvStationIcon
+                                            style={{
+                                                color: "pink",
+                                                fontSize: 50,
+                                            }}
+                                        />
                                     </ListItemAvatar>
-                                    <ListItemText primary="React and NodeJS" />
+                                    <ListItemText
+                                        primary="React and Angular"
+                                        sx={{ color: "whitesmoke" }}
+                                    />
                                 </ListItem>
                                 <ListItem>
                                     <ListItemAvatar>
-                                        <EvStationIcon color="secondary" />
+                                        <EvStationIcon
+                                            style={{
+                                                color: "pink",
+                                                fontSize: 50,
+                                            }}
+                                        />
                                     </ListItemAvatar>
-                                    <ListItemText primary="NodeJS and C#" />
+                                    <ListItemText
+                                        primary="NodeJS and C#"
+                                        sx={{ color: "whitesmoke" }}
+                                    />
                                 </ListItem>
                             </List>
                         </Grid>

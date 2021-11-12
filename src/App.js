@@ -14,17 +14,19 @@ import Zoom from "@mui/material/Zoom";
 import NavBarHeader from "./components/NavBarHeader/NavBarHeader";
 import RoadMap from "./components/RoadMap/RoadMap";
 import Footer from "./components/Footer/Footer";
-import CustomHeader from "./components/CustomHeader/CustomHeader";
 import PaddingElement from "./components/PaddingElement/PaddingElement";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Intro from "./components/Intro/Intro";
+
+//#3D0240
 
 let theme = createTheme({
     palette: {
         primary: {
-            main: "#white",
+            main: "#fff",
         },
         secondary: {
-            main: "#7B1EA2",
+            main: "#2a232d",
         },
     },
 });
@@ -114,8 +116,8 @@ function App(props) {
             <React.Fragment>
                 <CssBaseline />
                 <ElevationScroll {...props}>
-                    <AppBar>
-                        <Toolbar>
+                    <AppBar sx={{ background: "rgba(0,0,0,0)" }}>
+                        <Toolbar sx={{ padding: "0 !important" }}>
                             <NavBarHeader />
                         </Toolbar>
                     </AppBar>
@@ -123,29 +125,34 @@ function App(props) {
 
                 <Toolbar id="back-to-top-anchor" />
                 <div className="App">
-                    <PaddingElement space={3} />
-                    <CustomHeader heading={"About Us"} variant={"h2"} />
-                    <AboutUs context={context} id="about-us" />
-                    <PaddingElement space={5} />
-                    <CustomHeader heading={"Previous Works"} variant={"h2"} />
-                    <CardCarousel id="prev-work" />
-                    {/* <PaddingElement space={5} />
-                    <CustomHeader heading={"Technologies"} variant={"h2"} />
-                    <Technologies id="used-tech" /> */}
-                    <PaddingElement space={5} />
-                    <CustomHeader heading={"Road Map"} variant={"h2"} />
-                    <RoadMap id="road-map" variant={"h2"} />
-                    <PaddingElement space={5} />
-                    <CustomHeader heading={"Contact Us"} variant={"h2"} />
-                    <Footer id="footer" />
+                    <PaddingElement space={15} />
+                    <Intro p={5} />
+                    <PaddingElement space={15} />
+                    <AboutUs context={context} />
+                    <PaddingElement space={15} />
+                    <CardCarousel />
+                    <PaddingElement space={15} />
+                    <RoadMap />
+                    <PaddingElement space={15} />
+
+                    <Footer />
                 </div>
                 <ScrollTop {...props}>
                     <Fab
-                        color="secondary"
-                        size="small"
+                        size="large"
                         aria-label="scroll back to top"
+                        sx={{
+                            backgroundColor: "#2a232d !important",
+                            border: "3px solid #FEC0CA !important",
+                            borderRadius: "40px !important",
+                            boxShadow: "0 0 12px #FEC0CA !important",
+                        }}
                     >
-                        <KeyboardArrowUpIcon />
+                        <KeyboardArrowUpIcon
+                            sx={{
+                                color: "white",
+                            }}
+                        />
                     </Fab>
                 </ScrollTop>
             </React.Fragment>

@@ -1,13 +1,61 @@
 import React, { useCallback, useState } from "react";
 import Button from "@mui/material/Button";
-import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { cardItems } from "./Projects";
+import MobileStepper from "@mui/material/MobileStepper";
+import { makeStyles } from "@material-ui/core/styles";
 import "./styles.css";
+import CustomHeader from "../CustomHeader/CustomHeader";
+import PaddingElement from "../PaddingElement/PaddingElement";
+
+const useStyles = makeStyles((theme) => ({
+    projectContainer: {
+        [theme.breakpoints.up("md")]: {
+            display: "flex",
+        },
+    },
+    descContainer: {
+        display: "flex",
+        height: "75%",
+        alignItems: "center",
+    },
+    projectDesc: {
+        color: "white",
+        [theme.breakpoints.up("md")]: {
+            paddingBottom: "10vh",
+        },
+    },
+    cardImg: {
+        [theme.breakpoints.up("md")]: {
+            width: "200px",
+            height: "35vh",
+        },
+        [theme.breakpoints.down("sm")]: {
+            width: "140px",
+            height: "30vh",
+        },
+    },
+    cardImgSingle: {
+        [theme.breakpoints.up("md")]: {
+            width: "600px",
+            height: "40vh",
+        },
+        [theme.breakpoints.down("sm")]: {
+            width: "300px",
+            height: "25vh",
+        },
+    },
+    cardImgContain: {
+        height: "auto",
+        maxHeight: "45vh",
+        objectFit: "contain !important",
+    },
+}));
 
 function determineClasses(indexes, cardIndex) {
     if (indexes.currentIndex === cardIndex) {
@@ -21,6 +69,8 @@ function determineClasses(indexes, cardIndex) {
 }
 
 const CardCarousel = () => {
+    const classes = useStyles();
+
     const [indexes, setIndexes] = useState({
         previousIndex: 0,
         currentIndex: 0,
@@ -70,112 +120,165 @@ const CardCarousel = () => {
     );
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1 }} id="prev-work">
+            <PaddingElement space={10} />
+            <CustomHeader heading={"Previous Works"} variant={"h2"} />
             <Grid container>
-                <Grid
-                    item
-                    xs={12}
-                    md={12}
-                    lg={6}
-                    alignSelf={"center"}
-                    marginTop={5}
-                    marginBottom={15}
-                >
-                    <Grid className="d-flex">
-                        <Grid className="d-grid">
-                            <Button
-                                onClick={() => handleCardTransition(1)}
-                                variant="text"
-                                color="inherit"
-                            >
-                                <ArrowDropUpIcon fontSize="large" />
-                            </Button>
-                            <Button
-                                onClick={() => handleCardTransition(-1)}
-                                variant="text"
-                                color="inherit"
-                            >
-                                <ArrowDropDownIcon fontSize="large" />
-                            </Button>
-                        </Grid>
+                <Grid xs={12} md={12} alignSelf={"center"}>
+                    <Grid
+                        sx={{
+                            width: "80%",
+                            marginLeft: "7%",
+                            display: "flex",
+                            justifyContent: "space-between",
+                        }}
+                    >
+                        <Button
+                            onClick={() => handleCardTransition(1)}
+                            variant="text"
+                            color="inherit"
+                        >
+                            <ArrowLeftIcon
+                                style={{ color: "white", fontSize: 60 }}
+                            />
+                        </Button>
+                        <MobileStepper
+                            variant="dots"
+                            steps={cardItems.length}
+                            position="static"
+                            activeStep={indexes.currentIndex}
+                            sx={{
+                                size: 30,
+                                background: "border-box !important",
+                                justifyContent: "center",
+                            }}
+                            size="large"
+                        />
+                        <Button
+                            onClick={() => handleCardTransition(-1)}
+                            variant="text"
+                            color="inherit"
+                        >
+                            <ArrowRightIcon
+                                style={{ color: "white", fontSize: 60 }}
+                            />
+                        </Button>
+                    </Grid>
 
+                    <Grid className="d-flex">
                         <Grid className="card-carousel">
                             {cardItems.map((card, index) => (
                                 <li
                                     key={card.id}
+                                    style={{
+                                        backgroundColor: "#2a232d",
+                                        border: "3px solid #FEC0CA",
+                                        borderRadius: "40px",
+                                        boxShadow: "0 0 10px #FEC0CA",
+                                    }}
                                     className={`card ${determineClasses(
                                         indexes,
                                         index
                                     )}`}
                                 >
-                                    <h2>{card.title}</h2>
-                                    <p>{card.description}</p>
+                                    <Grid className={classes.projectContainer}>
+                                        <Grid item sm={12} md={6} lg={5}>
+                                            <h1 style={{ color: "white" }}>
+                                                {card.title}
+                                            </h1>
+                                            <Grid
+                                                className={
+                                                    classes.descContainer
+                                                }
+                                            >
+                                                <p
+                                                    className={
+                                                        classes.projectDesc
+                                                    }
+                                                >
+                                                    {card.description}
+                                                </p>
+                                            </Grid>
+                                        </Grid>
+                                        {card.img2 ? (
+                                            <Grid sm={12} md={6} lg={8}>
+                                                <ImageList
+                                                    sx={{
+                                                        justifyContent:
+                                                            "center",
+                                                        display: "flex",
+                                                        height: "auto",
+                                                    }}
+                                                    variant="quilted"
+                                                    cols={3}
+                                                >
+                                                    <ImageListItem
+                                                        className={
+                                                            classes.cardImg
+                                                        }
+                                                    >
+                                                        <img
+                                                            src={card.img1}
+                                                            alt={card.title}
+                                                            loading="auto"
+                                                            className={
+                                                                classes.cardImgContain
+                                                            }
+                                                        />
+                                                    </ImageListItem>
+                                                    <ImageListItem
+                                                        className={
+                                                            classes.cardImg
+                                                        }
+                                                    >
+                                                        <img
+                                                            src={`${card.img2}?w=161&fit=crop&auto=format`}
+                                                            srcSet={`${card.img2}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                                            alt={card.title}
+                                                            className={
+                                                                classes.cardImgContain
+                                                            }
+                                                            loading="lazy"
+                                                        />
+                                                    </ImageListItem>
+                                                    <ImageListItem
+                                                        className={
+                                                            classes.cardImg
+                                                        }
+                                                    >
+                                                        <img
+                                                            src={`${card.img3}?w=161&fit=crop&auto=format`}
+                                                            srcSet={`${card.img3}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                                            alt={card.title}
+                                                            className={
+                                                                classes.cardImgContain
+                                                            }
+                                                            loading="eager"
+                                                        />
+                                                    </ImageListItem>
+                                                </ImageList>
+                                            </Grid>
+                                        ) : (
+                                            <Grid sm={12} md={6} lg={8}>
+                                                <img
+                                                    sx={{
+                                                        height: "auto",
+                                                        width: "auto",
+                                                    }}
+                                                    src={card.img1}
+                                                    alt={card.title}
+                                                    loading="auto"
+                                                    className={
+                                                        classes.cardImgSingle
+                                                    }
+                                                />
+                                            </Grid>
+                                        )}
+                                    </Grid>
                                 </li>
                             ))}
                         </Grid>
                     </Grid>
-                </Grid>
-
-                <Grid
-                    item
-                    sm={12}
-                    lg={5}
-                    alignSelf={"center"}
-                    marginTop={5}
-                    margin={5}
-                    className="center-img"
-                >
-                    {cardItems[indexes.currentIndex].img2 ? (
-                        <ImageList
-                            sx={{ width: "80%", height: "80%" }}
-                            variant="woven"
-                            cols={3}
-                        >
-                            <ImageListItem>
-                                <img
-                                    src={cardItems[indexes.currentIndex].img1}
-                                    alt={cardItems[indexes.currentIndex].title}
-                                />
-                            </ImageListItem>
-                            <ImageListItem>
-                                <img
-                                    src={`${
-                                        cardItems[indexes.currentIndex].img2
-                                    }?w=161&fit=crop&auto=format`}
-                                    srcSet={`${
-                                        cardItems[indexes.currentIndex].img2
-                                    }?w=161&fit=crop&auto=format&dpr=2 2x`}
-                                    alt={cardItems[indexes.currentIndex].title}
-                                    loading="lazy"
-                                />
-                            </ImageListItem>
-                            <ImageListItem>
-                                <img
-                                    src={`${
-                                        cardItems[indexes.currentIndex].img3
-                                    }?w=161&fit=crop&auto=format`}
-                                    srcSet={`${
-                                        cardItems[indexes.currentIndex].img3
-                                    }?w=161&fit=crop&auto=format&dpr=2 2x`}
-                                    alt={cardItems[indexes.currentIndex].title}
-                                    loading="lazy"
-                                />
-                            </ImageListItem>
-                        </ImageList>
-                    ) : (
-                        <ImageList
-                            sx={{ width: "80%", height: "80%" }}
-                            variant="woven"
-                            cols={1}
-                        >
-                            <ImageListItem>
-                                <img
-                                    src={cardItems[indexes.currentIndex].img1}
-                                    alt={cardItems[indexes.currentIndex].title}
-                                />
-                            </ImageListItem>
-                        </ImageList>
-                    )}
                 </Grid>
             </Grid>
         </Box>
