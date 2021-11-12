@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/wavesofweb/static/css/main.5cb3b474.chunk.css",
+    "main.js": "/wavesofweb/static/js/main.573dd0c6.chunk.js",
+    "main.js.map": "/wavesofweb/static/js/main.573dd0c6.chunk.js.map",
+    "runtime-main.js": "/wavesofweb/static/js/runtime-main.4d8b7b6a.js",
+    "runtime-main.js.map": "/wavesofweb/static/js/runtime-main.4d8b7b6a.js.map",
+    "static/js/2.9faa0222.chunk.js": "/wavesofweb/static/js/2.9faa0222.chunk.js",
+    "static/js/2.9faa0222.chunk.js.map": "/wavesofweb/static/js/2.9faa0222.chunk.js.map",
+    "static/js/3.df920aa9.chunk.js": "/wavesofweb/static/js/3.df920aa9.chunk.js",
+    "static/js/3.df920aa9.chunk.js.map": "/wavesofweb/static/js/3.df920aa9.chunk.js.map",
+    "index.html": "/wavesofweb/index.html",
+    "static/css/main.5cb3b474.chunk.css.map": "/wavesofweb/static/css/main.5cb3b474.chunk.css.map",
+    "static/js/2.9faa0222.chunk.js.LICENSE.txt": "/wavesofweb/static/js/2.9faa0222.chunk.js.LICENSE.txt",
+    "static/media/chainImg.4cb50df6.jpeg": "/wavesofweb/static/media/chainImg.4cb50df6.jpeg",
+    "static/media/folk.f1fa70cc.jpeg": "/wavesofweb/static/media/folk.f1fa70cc.jpeg",
+    "static/media/futkids1.97e59eb1.png": "/wavesofweb/static/media/futkids1.97e59eb1.png",
+    "static/media/futkids2.e830af46.png": "/wavesofweb/static/media/futkids2.e830af46.png",
+    "static/media/futkids3.f5f3d68e.png": "/wavesofweb/static/media/futkids3.f5f3d68e.png",
+    "static/media/laundrative1.a841ce42.png": "/wavesofweb/static/media/laundrative1.a841ce42.png",
+    "static/media/laundrative2.57d2ff7b.png": "/wavesofweb/static/media/laundrative2.57d2ff7b.png",
+    "static/media/laundrative3.5a06d94c.png": "/wavesofweb/static/media/laundrative3.5a06d94c.png",
+    "static/media/pink-beast.6714c9b5.png": "/wavesofweb/static/media/pink-beast.6714c9b5.png",
+    "static/media/up1.b4b526e1.jpg": "/wavesofweb/static/media/up1.b4b526e1.jpg",
+    "static/media/up2.5361f0b0.jpg": "/wavesofweb/static/media/up2.5361f0b0.jpg",
+    "static/media/up3.397bf5a9.jpg": "/wavesofweb/static/media/up3.397bf5a9.jpg",
+    "static/media/wow-logo.192485e3.png": "/wavesofweb/static/media/wow-logo.192485e3.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4d8b7b6a.js",
+    "static/js/2.9faa0222.chunk.js",
+    "static/css/main.5cb3b474.chunk.css",
+    "static/js/main.573dd0c6.chunk.js"
+  ]
+}
