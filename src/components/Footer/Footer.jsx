@@ -63,50 +63,7 @@ const Footer = () => {
                                 container
                             >
                                 <Grid item>
-                                    <Grid direction="row" container>
-                                        <nav aria-label="footer" item>
-                                            <List>
-                                                <ListItem>
-                                                    <ListItemButton>
-                                                        <ListItemIcon>
-                                                            <InstagramIcon
-                                                                sx={{
-                                                                    color: "white",
-                                                                }}
-                                                            />
-                                                        </ListItemIcon>
-                                                    </ListItemButton>
-                                                    <ListItemButton>
-                                                        <ListItemIcon>
-                                                            <MailOutlineIcon
-                                                                sx={{
-                                                                    color: "white",
-                                                                }}
-                                                            />
-                                                        </ListItemIcon>
-                                                    </ListItemButton>
-                                                    <ListItemButton>
-                                                        <ListItemIcon>
-                                                            <GitHubIcon
-                                                                sx={{
-                                                                    color: "white",
-                                                                }}
-                                                            />
-                                                        </ListItemIcon>
-                                                    </ListItemButton>
-                                                    <ListItemButton>
-                                                        <ListItemIcon>
-                                                            <LinkedInIcon
-                                                                sx={{
-                                                                    color: "white",
-                                                                }}
-                                                            />
-                                                        </ListItemIcon>
-                                                    </ListItemButton>
-                                                </ListItem>
-                                            </List>
-                                        </nav>
-                                    </Grid>
+                                    <SocialLinks />
                                 </Grid>
                                 <Grid
                                     item
