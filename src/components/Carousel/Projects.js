@@ -52,7 +52,11 @@ export const cardItems = [
         id: 5,
         title: "What Does The Folk Say",
         copy: "Lorem ipsum dolor sit amet",
-        description: "For a given query this program can look get the public opinion based on recent tweets about that subject.",
+        description: `
+            This is an sentiment analysis api developed with NodeJs. With this api, you can find the common opinion in public
+            based on recents tweets about that subject. Api returns a json object showing the what is the public opinion and what is
+            the point of that query through sentiment analysis machine learning algorithm.
+        `,
         img1: folk,
         img2: folk,
         img3: folk,
@@ -61,6 +65,10 @@ export const cardItems = [
         id: 6,
         title: "UP",
         copy: "Lorem ipsum dolor sit amet",
-        description: "UP is a social media platform where college student can communicate, create groups and find job opportunities",
+        description: `
+            UP is a social media platform for college students. Here students can use this app like twitter or directly message to each other.
+            When students choose which courses they are taking, they automatically participate in group chat created with other students taking the same course.
+            Also students can find job opportunities since this app connects companies and students.
+        `,
     },
 ];
