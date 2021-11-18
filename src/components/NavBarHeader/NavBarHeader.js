@@ -97,12 +97,6 @@ const NavBarHeader = (props) => {
             id: "roadmap",
             link: "#road-map",
         },
-        {
-            menuTitle: "Contact Us",
-            pageURL: "/contact-us",
-            id: "contact",
-            link: "#footer",
-        },
     ];
 
     return (

@@ -9,10 +9,12 @@ import ImageListItem from "@mui/material/ImageListItem";
 import { cardItems } from "./Projects";
 import MobileStepper from "@mui/material/MobileStepper";
 import { makeStyles } from "@material-ui/core/styles";
+import TextareaAutosize from "@mui/material/TextareaAutosize";
 import "./styles.css";
 import CustomHeader from "../CustomHeader/CustomHeader";
 import PaddingElement from "../PaddingElement/PaddingElement";
-
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useTheme } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
     projectContainer: {
         [theme.breakpoints.up("md")]: {
@@ -21,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     },
     descContainer: {
         display: "flex",
-        height: "75%",
+        height: "65%",
         alignItems: "center",
     },
     projectDesc: {
@@ -33,21 +35,21 @@ const useStyles = makeStyles((theme) => ({
     cardImg: {
         [theme.breakpoints.up("md")]: {
             width: "200px",
-            height: "35vh",
+            height: "auto",
         },
         [theme.breakpoints.down("sm")]: {
             width: "140px",
-            height: "30vh",
+            height: "auto",
         },
     },
     cardImgSingle: {
         [theme.breakpoints.up("md")]: {
-            width: "600px",
-            height: "40vh",
+            width: "90%",
+            height: "auto",
         },
         [theme.breakpoints.down("sm")]: {
-            width: "300px",
-            height: "25vh",
+            width: "250px",
+            height: "auto",
         },
     },
     cardImgContain: {
@@ -70,7 +72,8 @@ function determineClasses(indexes, cardIndex) {
 
 const CardCarousel = () => {
     const classes = useStyles();
-
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
     const [indexes, setIndexes] = useState({
         previousIndex: 0,
         currentIndex: 0,
@@ -123,48 +126,50 @@ const CardCarousel = () => {
         <Box sx={{ flexGrow: 1 }} id="prev-work">
             <PaddingElement space={10} />
             <CustomHeader heading={"Previous Works"} variant={"h2"} />
-            <Grid container>
-                <Grid xs={12} md={12} alignSelf={"center"}>
-                    <Grid
-                        sx={{
-                            width: "80%",
-                            marginLeft: "7%",
-                            display: "flex",
-                            justifyContent: "space-between",
-                        }}
-                    >
-                        <Button
-                            onClick={() => handleCardTransition(1)}
-                            variant="text"
-                            color="inherit"
-                        >
-                            <ArrowLeftIcon
-                                style={{ color: "white", fontSize: 60 }}
-                            />
-                        </Button>
-                        <MobileStepper
-                            variant="dots"
-                            steps={cardItems.length}
-                            position="static"
-                            activeStep={indexes.currentIndex}
-                            sx={{
-                                size: 30,
-                                background: "border-box !important",
-                                justifyContent: "center",
-                            }}
-                            size="large"
-                        />
-                        <Button
-                            onClick={() => handleCardTransition(-1)}
-                            variant="text"
-                            color="inherit"
-                        >
-                            <ArrowRightIcon
-                                style={{ color: "white", fontSize: 60 }}
-                            />
-                        </Button>
-                    </Grid>
+            <Grid
+                sx={{
+                    width: "80%",
+                    marginLeft: "7%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                }}
+            >
+                <Button
+                    onClick={() => handleCardTransition(1)}
+                    variant="text"
+                    color="inherit"
+                >
+                    <ArrowLeftIcon style={{ color: "white", fontSize: 60 }} />
+                </Button>
+                <MobileStepper
+                    variant="dots"
+                    steps={cardItems.length}
+                    position="static"
+                    activeStep={indexes.currentIndex}
+                    sx={{
+                        size: 60,
+                        background: "border-box !important",
+                        justifyContent: "center",
+                    }}
+                    size="large"
+                />
+                <Button
+                    onClick={() => handleCardTransition(-1)}
+                    variant="text"
+                    color="inherit"
+                >
+                    <ArrowRightIcon style={{ color: "white", fontSize: 60 }} />
+                </Button>
+            </Grid>
+            <PaddingElement space={10} />
 
+            <Grid container>
+                <Grid
+                    xs={12}
+                    md={12}
+                    alignSelf={"center"}
+                    marginTop={isMobile ? 12 : 15}
+                >
                     <Grid className="d-flex">
                         <Grid className="card-carousel">
                             {cardItems.map((card, index) => (
@@ -191,13 +196,20 @@ const CardCarousel = () => {
                                                     classes.descContainer
                                                 }
                                             >
-                                                <p
-                                                    className={
-                                                        classes.projectDesc
+                                                <TextareaAutosize
+                                                    maxRows={isMobile ? 4 : 12}
+                                                    defaultValue={
+                                                        card.description
                                                     }
-                                                >
-                                                    {card.description}
-                                                </p>
+                                                    style={{
+                                                        width: "90%",
+                                                        background: "inherit",
+                                                        border: "none",
+                                                        "text-align":
+                                                            "left !important",
+                                                        color: "white",
+                                                    }}
+                                                />
                                             </Grid>
                                         </Grid>
                                         {card.img2 ? (
@@ -259,7 +271,12 @@ const CardCarousel = () => {
                                                 </ImageList>
                                             </Grid>
                                         ) : (
-                                            <Grid sm={12} md={6} lg={8}>
+                                            <Grid
+                                                sm={12}
+                                                md={6}
+                                                lg={8}
+                                                marginTop={5}
+                                            >
                                                 <img
                                                     sx={{
                                                         height: "auto",
@@ -281,6 +298,7 @@ const CardCarousel = () => {
                     </Grid>
                 </Grid>
             </Grid>
+            <PaddingElement space={20} />
         </Box>
     );
 };

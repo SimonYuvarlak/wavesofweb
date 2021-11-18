@@ -6,7 +6,6 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const SocialLinks = () => {
@@ -46,17 +45,7 @@ const SocialLinks = () => {
                                                 </a>
                                             </ListItemIcon>
                                         </ListItemButton>
-                                        <ListItemButton>
-                                            <ListItemIcon>
-                                                <a href="https://github.com/SimonYuvarlak">
-                                                    <GitHubIcon
-                                                        sx={{
-                                                            color: "white",
-                                                        }}
-                                                    />
-                                                </a>
-                                            </ListItemIcon>
-                                        </ListItemButton>
+
                                         <ListItemButton>
                                             <ListItemIcon>
                                                 <a href="https://www.linkedin.com/in/seman-arda-yuvarlak-563572b3/">
