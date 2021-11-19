@@ -8,6 +8,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import logo from "../../assets/wow-logo.png";
 import { Grid } from "@mui/material";
 import SocialLinks from "../SoicalLinks/SocialLinks";
+import CustomTypography from "../CustomTypography/CustomTypography";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -144,7 +145,8 @@ const NavBarHeader = (props) => {
                                             href={item.link}
                                             style={{ textDecoration: "none" }}
                                         >
-                                            {item.menuTitle}
+                                            <CustomTypography variant="p" content={item.menuTitle} />
+                                            {/* {item.menuTitle} */}
                                         </a>
                                     </MenuItem>
                                 );
@@ -178,7 +180,8 @@ const NavBarHeader = (props) => {
                                             variant="text"
                                             className={classes.navBtn}
                                         >
-                                            {item.menuTitle}
+                                            <CustomTypography variant="subtitle1" content={item.menuTitle} />
+                                            {/* {item.menuTitle} */}
                                         </Button>
                                     </a>
                                 );
