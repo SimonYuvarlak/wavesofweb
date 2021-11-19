@@ -9,6 +9,7 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 import SocialLinks from "../SoicalLinks/SocialLinks";
+import CustomTypography from "../CustomTypography/CustomTypography";
 
 const Footer = () => {
     const year = new Date().getFullYear();
@@ -28,15 +29,13 @@ const Footer = () => {
                         alignItems="center"
                         alignSelf="center"
                     >
-                        <Typography
-                            variant="caption"
+                        <CustomTypography
+                            variant={"caption"}
                             display="block"
                             gutterBottom
-                            color="whitesmoke"
                             mt={4}
-                        >
-                            WoW&reg; {year}
-                        </Typography>
+                            content={"Wow&reg" + year}
+                        />
                     </Grid>
                 </Grid>
             ) : (
@@ -68,15 +67,13 @@ const Footer = () => {
                                     alignItems="center"
                                     alignSelf="center"
                                 >
-                                    <Typography
-                                        variant="caption"
+                                    <CustomTypography
+                                        variant={"p"}
                                         display="block"
                                         gutterBottom
-                                        color="whitesmoke"
                                         mt={4}
-                                    >
-                                        WoW&reg; {year}
-                                    </Typography>
+                                        content={"Wow®" + year}
+                                    />
                                 </Grid>
                                 <Grid item>
                                     <Grid
@@ -103,7 +100,7 @@ const Footer = () => {
                                                             }}
                                                         >
                                                             <ListItemText
-                                                                primary="About Us"
+                                                                primary={<CustomTypography variant="subtitle1" content="About Us" />}
                                                                 sx={{
                                                                     color: "white",
                                                                 }}
@@ -132,7 +129,7 @@ const Footer = () => {
                                                             }}
                                                         >
                                                             <ListItemText
-                                                                primary="Previous Works"
+                                                                primary={<CustomTypography variant="subtitle1" content="Previous Works" />}
                                                                 sx={{
                                                                     color: "white",
                                                                 }}
@@ -161,7 +158,7 @@ const Footer = () => {
                                                             }}
                                                         >
                                                             <ListItemText
-                                                                primary="Road Map"
+                                                                primary={<CustomTypography variant="subtitle1" content="Road Map" />}
                                                                 sx={{
                                                                     color: "white",
                                                                 }}
@@ -177,8 +174,9 @@ const Footer = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-            )}
-        </div>
+            )
+            }
+        </div >
     );
 };
 
