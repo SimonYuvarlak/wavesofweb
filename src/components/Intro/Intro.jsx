@@ -30,14 +30,13 @@ const BlackGrid = withStyles({
         backgorundColor: "rgba(0, 0, 0, 0.8)",
         padding: "20px 40px 10px 0px",
         border: "3px solid #FEC0CA",
-        borderRadius: "40px 40px 40px 40px",
+        borderRadius: "30px 30px 30px 30px",
         boxShadow: "0 0 10px #FEC0CA",
     },
 })(Grid);
 
 const ContainerGrid = withStyles({
     root: {
-        // padding: "0px 250px 0px 250px",
         padding: "0% 5% 5% 5%",
     },
 })(Grid);
@@ -53,25 +52,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Intro = () => {
-    // const theme = useTheme();
-    // const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-    //Mobile a uyarlanmasi lazim
     const classes = useStyles();
     const terminal = [" ", "_"];
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-    // const text =
-    //     "Welcome to Code Brewery. Our services. Web Desing. Web Development. App Development. Api Development.";
-
-    // const arr = text.split(".");
-
-    // const getLetter = (letter) => {
-    //     return (
-    //         <Typography item variant="h1" component="div" gutterBottom>
-    //             letter
-    //         </Typography>
-    //     );
-    // };
 
     return (
         <Grid container justifyContent="center" direction="column" id="intro">

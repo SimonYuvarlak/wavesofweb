@@ -15,21 +15,18 @@ import EvStationIcon from "@mui/icons-material/EvStation";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 import PaddingElement from "../PaddingElement/PaddingElement";
+import Avatar from '@mui/material/Avatar';
+import CheckIcon from '@mui/icons-material/Check';
+import AirIcon from '@mui/icons-material/Air';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
 // import { withStyles } from "@material-ui/core/styles";
 
 const AboutUs = (props) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
-    const text = `
-        We are a software company developing its on products as well as freelance products using modern technologies.
-        We have three different services. Our first service is mobile app development. We use react native. We can develop simultaneously 
-        for Android and IOS using react native. 
-        Our other service is Web development. We use React for Web development. Since we use react native for mobile app development you can get more
-        consistency between your mobile apps and websites.
-        Lastly we offer api development. We use NodeJs which we also use as our backend language for web and mobile app development.
-        These three technologies are based on Javascript hence we get consistency and harmony in every part of our development.
-    `;
+    const text = `We are a software company developing its on products as well as freelance products using modern technologies.
+        We have three different services.`;
 
     return (
         <Grid container direction="column" id="about-us">
@@ -48,6 +45,32 @@ const AboutUs = (props) => {
                     >
                         {text}
                     </Typography>
+                    <List sx={{ width: '100%', maxWidth: 360 }} direction="row">
+                        <ListItem>
+                            <ListItemAvatar>
+                                <Avatar>
+                                    <CheckIcon />
+                                </Avatar>
+                            </ListItemAvatar>
+                            <ListItemText primary="Modern" sx={{ color: "white" }} secondary={<Typography variant="p" style={{ color: 'gray', fontStyle: "italic" }}> New and up to date frameworks </Typography>} />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemAvatar>
+                                <Avatar>
+                                    <AirIcon />
+                                </Avatar>
+                            </ListItemAvatar>
+                            <ListItemText primary="Fast" sx={{ color: "white" }} secondary={<Typography variant="p" style={{ color: 'gray', fontStyle: "italic" }}> Native performance </Typography>} />
+                        </ListItem>
+                        <ListItem>
+                            <ListItemAvatar>
+                                <Avatar>
+                                    <LockOpenIcon />
+                                </Avatar>
+                            </ListItemAvatar>
+                            <ListItemText primary="Secure" sx={{ color: "white" }} secondary={<Typography variant="p" style={{ color: 'gray', fontStyle: "italic" }}> Backed and used by texh giants</Typography>} />
+                        </ListItem>
+                    </List>
                 </Grid>
             </Grid>
             <Grid item>
@@ -214,7 +237,7 @@ const AboutUs = (props) => {
                     </Grid>
                 </Grid>
             </Grid>
-        </Grid>
+        </Grid >
     );
 };
 
