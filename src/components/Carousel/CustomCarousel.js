@@ -188,9 +188,7 @@ const CardCarousel = () => {
                                 >
                                     <Grid className={classes.projectContainer}>
                                         <Grid item sm={12} md={6} lg={5}>
-                                            <h1 style={{ color: "white" }}>
-                                                {card.title}
-                                            </h1>
+                                            <CustomHeader variant={"h3"} heading={card.title} />
                                             <Grid
                                                 className={
                                                     classes.descContainer
@@ -208,6 +206,8 @@ const CardCarousel = () => {
                                                         "text-align":
                                                             "left !important",
                                                         color: "white",
+                                                        fontFamily: "Rajdhani, sans-serif",
+                                                        fontSize: 20,
                                                     }}
                                                 />
                                             </Grid>

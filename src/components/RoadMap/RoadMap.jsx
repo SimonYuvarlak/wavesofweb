@@ -4,6 +4,7 @@ import { Grid } from "@mui/material";
 import RoadMapArray from "./RoadMapArray";
 import PaddingElement from "../PaddingElement/PaddingElement";
 import CustomHeader from "../CustomHeader/CustomHeader";
+import CustomTypography from "../CustomTypography/CustomTypography";
 
 const RoadMap = () => {
     var index = 0;
@@ -19,10 +20,10 @@ const RoadMap = () => {
             <Grid
                 container
                 direction="row"
-                alignContent="center"
+                justifyContent="center"
                 alignItems="center"
             >
-                <Grid item direction="column" xs={12} md={6}>
+                <Grid item xs={12} md={6}>
                     <Section
                         heading={RoadMapArray[0].heading}
                         date={RoadMapArray[0].date}
@@ -40,7 +41,7 @@ const RoadMap = () => {
                         dateColor={colors[index3++]}
                     />
                 </Grid>
-                <Grid item direction="row" xs={12} md={6}>
+                <Grid item xs={12} md={6}>
                     <Section
                         heading={RoadMapArray[2].heading}
                         date={RoadMapArray[2].date}

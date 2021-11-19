@@ -7,7 +7,7 @@ const StyledTypography = withStyles({
     root: {
         fontFamily: "Rajdhani, sans-serif",
         color: "whitesmoke",
-        aign: "left",
+        textAlign: "justify",
     },
 })(Typography);
 

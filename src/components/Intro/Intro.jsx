@@ -8,11 +8,12 @@ import image from "../../assets/pink-beast.png";
 import { makeStyles } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
+import CustomTypography from "../CustomTypography/CustomTypography";
 const WhiteTextTypography = withStyles({
     root: {
         color: "#FFFFFF",
         fontSize: "3rem",
-        fontFamily: "Copperplate",
+        fontFamily: "Rajdhani, sans-serif",
     },
 })(Typography);
 
