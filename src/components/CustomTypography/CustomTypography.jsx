@@ -5,7 +5,7 @@ import { withStyles } from "@material-ui/core/styles";
 
 const StyledTypography = withStyles({
     root: {
-        fontFamily: "Rajdhani, sans-serif",
+        fontFamily: "Rajdhani, sans-serif !important",
         color: "white",
         textAlign: "left",
     },
