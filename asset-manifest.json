@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/wavesofweb/static/css/main.5cb3b474.chunk.css",
-    "main.js": "/wavesofweb/static/js/main.573dd0c6.chunk.js",
-    "main.js.map": "/wavesofweb/static/js/main.573dd0c6.chunk.js.map",
-    "runtime-main.js": "/wavesofweb/static/js/runtime-main.4d8b7b6a.js",
-    "runtime-main.js.map": "/wavesofweb/static/js/runtime-main.4d8b7b6a.js.map",
-    "static/js/2.9faa0222.chunk.js": "/wavesofweb/static/js/2.9faa0222.chunk.js",
-    "static/js/2.9faa0222.chunk.js.map": "/wavesofweb/static/js/2.9faa0222.chunk.js.map",
-    "static/js/3.df920aa9.chunk.js": "/wavesofweb/static/js/3.df920aa9.chunk.js",
-    "static/js/3.df920aa9.chunk.js.map": "/wavesofweb/static/js/3.df920aa9.chunk.js.map",
+    "main.css": "/wavesofweb/static/css/main.3cf6e0f7.chunk.css",
+    "main.js": "/wavesofweb/static/js/main.3decfd59.chunk.js",
+    "main.js.map": "/wavesofweb/static/js/main.3decfd59.chunk.js.map",
+    "runtime-main.js": "/wavesofweb/static/js/runtime-main.8f66f2a4.js",
+    "runtime-main.js.map": "/wavesofweb/static/js/runtime-main.8f66f2a4.js.map",
+    "static/js/2.fe2d73a7.chunk.js": "/wavesofweb/static/js/2.fe2d73a7.chunk.js",
+    "static/js/2.fe2d73a7.chunk.js.map": "/wavesofweb/static/js/2.fe2d73a7.chunk.js.map",
+    "static/js/3.c6b1c3bc.chunk.js": "/wavesofweb/static/js/3.c6b1c3bc.chunk.js",
+    "static/js/3.c6b1c3bc.chunk.js.map": "/wavesofweb/static/js/3.c6b1c3bc.chunk.js.map",
     "index.html": "/wavesofweb/index.html",
-    "static/css/main.5cb3b474.chunk.css.map": "/wavesofweb/static/css/main.5cb3b474.chunk.css.map",
-    "static/js/2.9faa0222.chunk.js.LICENSE.txt": "/wavesofweb/static/js/2.9faa0222.chunk.js.LICENSE.txt",
+    "static/css/main.3cf6e0f7.chunk.css.map": "/wavesofweb/static/css/main.3cf6e0f7.chunk.css.map",
+    "static/js/2.fe2d73a7.chunk.js.LICENSE.txt": "/wavesofweb/static/js/2.fe2d73a7.chunk.js.LICENSE.txt",
     "static/media/chainImg.4cb50df6.jpeg": "/wavesofweb/static/media/chainImg.4cb50df6.jpeg",
     "static/media/folk.f1fa70cc.jpeg": "/wavesofweb/static/media/folk.f1fa70cc.jpeg",
     "static/media/futkids1.97e59eb1.png": "/wavesofweb/static/media/futkids1.97e59eb1.png",
@@ -27,9 +27,9 @@
     "static/media/wow-logo.192485e3.png": "/wavesofweb/static/media/wow-logo.192485e3.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.4d8b7b6a.js",
-    "static/js/2.9faa0222.chunk.js",
-    "static/css/main.5cb3b474.chunk.css",
-    "static/js/main.573dd0c6.chunk.js"
+    "static/js/runtime-main.8f66f2a4.js",
+    "static/js/2.fe2d73a7.chunk.js",
+    "static/css/main.3cf6e0f7.chunk.css",
+    "static/js/main.3decfd59.chunk.js"
   ]
 }
