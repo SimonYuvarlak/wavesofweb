@@ -19,6 +19,7 @@ import Avatar from '@mui/material/Avatar';
 import CheckIcon from '@mui/icons-material/Check';
 import AirIcon from '@mui/icons-material/Air';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
+import CustomTypography from "../CustomTypography/CustomTypography";
 // import { withStyles } from "@material-ui/core/styles";
 
 const AboutUs = (props) => {
@@ -35,20 +36,17 @@ const AboutUs = (props) => {
             <CustomHeader heading={"About Us"} variant={"h2"} />
             <Grid item>
                 <Grid container direction="row" p={10}>
-                    <Grid item xs={12} md={6} lg={6} p={5}>
-                        <Typography
-                            variant="h6"
-                            gutterBottom
-                            component="div"
-                            sx={{ textShadow: "1px 1px #7B1EA2" }}
-                            color="whitesmoke"
-                            align="left"
-                        >
-                            {text}
-                        </Typography>
+                    <Grid item xs={12} md={6} lg={6}>
+                        <Grid container justifyContent="center" alignItems="center">
+                            <CustomTypography
+                                variant={"h6"}
+                                component={"div"}
+                                content={text}
+                            />
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12} md={6} lg={6} p={3}>
-                        <Grid container direction="row" justifyContent="center" alignItems="center">
+                    <Grid item xs={12} md={6} lg={6}>
+                        <Grid container justifyContent="center" alignItems="center">
                             <List sx={{ width: '100%', maxWidth: 360 }}>
                                 <ListItem>
                                     <ListItemAvatar>
@@ -56,7 +54,7 @@ const AboutUs = (props) => {
                                             <CheckIcon />
                                         </Avatar>
                                     </ListItemAvatar>
-                                    <ListItemText primary="Modern" sx={{ color: "white" }} secondary={<Typography variant="p" style={{ color: 'gray', fontStyle: "italic" }}> New and up to date frameworks </Typography>} />
+                                    <ListItemText primary={<CustomHeader variant={"h6"} heading={"Modern"} />} sx={{ fontStyle: "bold !important" }} secondary={<CustomTypography variant="p" content={"New and up to date frameworks"} style={{ color: 'gray', fontStyle: "italic" }} />} />
                                 </ListItem>
                                 <ListItem>
                                     <ListItemAvatar>
@@ -64,7 +62,7 @@ const AboutUs = (props) => {
                                             <AirIcon />
                                         </Avatar>
                                     </ListItemAvatar>
-                                    <ListItemText primary="Fast" sx={{ color: "white" }} secondary={<Typography variant="p" style={{ color: 'gray', fontStyle: "italic" }}> Native performance </Typography>} />
+                                    <ListItemText primary={<CustomHeader variant={"h6"} heading={"Fast"} />} sx={{ fontStyle: "bold !important" }} secondary={<CustomTypography variant="p" content={"Native performance"} style={{ color: 'gray', fontStyle: "italic" }} />} />
                                 </ListItem>
                                 <ListItem>
                                     <ListItemAvatar>
@@ -72,7 +70,7 @@ const AboutUs = (props) => {
                                             <LockOpenIcon />
                                         </Avatar>
                                     </ListItemAvatar>
-                                    <ListItemText primary="Secure" sx={{ color: "white" }} secondary={<Typography variant="p" style={{ color: 'gray', fontStyle: "italic" }}> Backed and used by texh giants</Typography>} />
+                                    <ListItemText primary={<CustomHeader variant={"h6"} heading={"Secure"} />} sx={{ fontStyle: "bold !important" }} secondary={<CustomTypography variant="p" content={"Backed and used by tech giants"} style={{ color: 'gray', fontStyle: "italic" }} />} />
                                 </ListItem>
                             </List>
                         </Grid>
@@ -115,11 +113,7 @@ const AboutUs = (props) => {
                                         />
                                     </ListItemAvatar>
                                     <ListItemText
-                                        primary="IOS and Android App Development"
-                                        style={{
-                                            color: "whitesmoke",
-                                            fontSize: 1,
-                                        }}
+                                        primary={<CustomTypography variant={"h6"} content={"IOS and Android App Development"} />}
                                     />
                                 </ListItem>
                                 <ListItem>
@@ -132,8 +126,7 @@ const AboutUs = (props) => {
                                         />
                                     </ListItemAvatar>
                                     <ListItemText
-                                        primary="Web Development"
-                                        sx={{ color: "whitesmoke", size: 5 }}
+                                        primary={<CustomTypography variant={"h6"} content={"Web Development"} />}
                                     />
                                 </ListItem>
                                 <ListItem>
@@ -146,8 +139,7 @@ const AboutUs = (props) => {
                                         />
                                     </ListItemAvatar>
                                     <ListItemText
-                                        primary="Api Development"
-                                        sx={{ color: "whitesmoke" }}
+                                        primary={<CustomTypography variant={"h6"} content={"Api Development"} />}
                                     />
                                 </ListItem>
                             </List>
@@ -206,8 +198,7 @@ const AboutUs = (props) => {
                                         />
                                     </ListItemAvatar>
                                     <ListItemText
-                                        primary="React Native"
-                                        sx={{ color: "whitesmoke" }}
+                                        primary={<CustomTypography variant={"h6"} content={"React Native"} />}
                                     />
                                 </ListItem>
                                 <ListItem>
@@ -220,8 +211,7 @@ const AboutUs = (props) => {
                                         />
                                     </ListItemAvatar>
                                     <ListItemText
-                                        primary="React and Angular"
-                                        sx={{ color: "whitesmoke" }}
+                                        primary={<CustomTypography variant={"h6"} content={"ReactJS and AngularJS"} />}
                                     />
                                 </ListItem>
                                 <ListItem>
@@ -234,8 +224,7 @@ const AboutUs = (props) => {
                                         />
                                     </ListItemAvatar>
                                     <ListItemText
-                                        primary="NodeJS and C#"
-                                        sx={{ color: "whitesmoke" }}
+                                        primary={<CustomTypography variant={"h6"} content={"NodeJS and C#"} />}
                                     />
                                 </ListItem>
                             </List>
