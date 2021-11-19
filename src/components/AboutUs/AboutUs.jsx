@@ -26,7 +26,8 @@ const AboutUs = (props) => {
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
     const text = `We are a software company developing its on products as well as freelance products using modern technologies.
-        We have three different services.`;
+    With the servies we are developing, we aim to minimize the pain of working with a freelancer. We specialized in technologies
+    which we believe will give you the result that you wanted. We have three different services.`;
 
     return (
         <Grid container direction="column" id="about-us">
@@ -34,43 +35,48 @@ const AboutUs = (props) => {
             <CustomHeader heading={"About Us"} variant={"h2"} />
             <Grid item>
                 <Grid container direction="row" p={10}>
-                    <Typography
-                        variant="h6"
-                        gutterBottom
-                        component="div"
-                        item
-                        sx={{ textShadow: "1px 1px #7B1EA2" }}
-                        color="whitesmoke"
-                        align="left"
-                    >
-                        {text}
-                    </Typography>
-                    <List sx={{ width: '100%', maxWidth: 360 }} direction="row">
-                        <ListItem>
-                            <ListItemAvatar>
-                                <Avatar>
-                                    <CheckIcon />
-                                </Avatar>
-                            </ListItemAvatar>
-                            <ListItemText primary="Modern" sx={{ color: "white" }} secondary={<Typography variant="p" style={{ color: 'gray', fontStyle: "italic" }}> New and up to date frameworks </Typography>} />
-                        </ListItem>
-                        <ListItem>
-                            <ListItemAvatar>
-                                <Avatar>
-                                    <AirIcon />
-                                </Avatar>
-                            </ListItemAvatar>
-                            <ListItemText primary="Fast" sx={{ color: "white" }} secondary={<Typography variant="p" style={{ color: 'gray', fontStyle: "italic" }}> Native performance </Typography>} />
-                        </ListItem>
-                        <ListItem>
-                            <ListItemAvatar>
-                                <Avatar>
-                                    <LockOpenIcon />
-                                </Avatar>
-                            </ListItemAvatar>
-                            <ListItemText primary="Secure" sx={{ color: "white" }} secondary={<Typography variant="p" style={{ color: 'gray', fontStyle: "italic" }}> Backed and used by texh giants</Typography>} />
-                        </ListItem>
-                    </List>
+                    <Grid item xs={12} md={6} lg={6} p={5}>
+                        <Typography
+                            variant="h6"
+                            gutterBottom
+                            component="div"
+                            sx={{ textShadow: "1px 1px #7B1EA2" }}
+                            color="whitesmoke"
+                            align="left"
+                        >
+                            {text}
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={6} lg={6} p={3}>
+                        <Grid container direction="row" justifyContent="center" alignItems="center">
+                            <List sx={{ width: '100%', maxWidth: 360 }}>
+                                <ListItem>
+                                    <ListItemAvatar>
+                                        <Avatar>
+                                            <CheckIcon />
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary="Modern" sx={{ color: "white" }} secondary={<Typography variant="p" style={{ color: 'gray', fontStyle: "italic" }}> New and up to date frameworks </Typography>} />
+                                </ListItem>
+                                <ListItem>
+                                    <ListItemAvatar>
+                                        <Avatar>
+                                            <AirIcon />
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary="Fast" sx={{ color: "white" }} secondary={<Typography variant="p" style={{ color: 'gray', fontStyle: "italic" }}> Native performance </Typography>} />
+                                </ListItem>
+                                <ListItem>
+                                    <ListItemAvatar>
+                                        <Avatar>
+                                            <LockOpenIcon />
+                                        </Avatar>
+                                    </ListItemAvatar>
+                                    <ListItemText primary="Secure" sx={{ color: "white" }} secondary={<Typography variant="p" style={{ color: 'gray', fontStyle: "italic" }}> Backed and used by texh giants</Typography>} />
+                                </ListItem>
+                            </List>
+                        </Grid>
+                    </Grid>
                 </Grid>
             </Grid>
             <Grid item>
