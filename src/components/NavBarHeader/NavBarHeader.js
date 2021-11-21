@@ -133,20 +133,20 @@ const NavBarHeader = (props) => {
                             }}
                             open={open}
                             onClose={() => setAnchorEl(null)}
+                            style={{ background: "rgba(1,1,1,0.5)" }}
                         >
                             {menuItems.map((item) => {
                                 return (
                                     <MenuItem
                                         key={item.id}
                                         onClick={() => handleMenuClick(null)}
-                                        color="#000"
+                                        style={{ backgroundColor: "#3D0240", margin: "-8px", padding: "20px" }}
                                     >
                                         <a
                                             href={item.link}
                                             style={{ textDecoration: "none" }}
                                         >
                                             <CustomTypography variant="p" content={item.menuTitle} />
-                                            {/* {item.menuTitle} */}
                                         </a>
                                     </MenuItem>
                                 );

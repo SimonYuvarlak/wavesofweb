@@ -34,7 +34,7 @@ const Footer = () => {
                             display="block"
                             gutterBottom
                             mt={4}
-                            content={"Wow&reg" + year}
+                            content={"Wow®" + year}
                         />
                     </Grid>
                 </Grid>
